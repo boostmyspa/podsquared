@@ -1,0 +1,313 @@
+{% extends 'builder/base-sidebar.html' %}
+{% load static %}
+{% block content %}
+
+      <!-- Content -->
+      <div class="content container-fluid">
+        <!-- Page Header -->
+        <div class="page-header">
+          <div class="row align-items-end">
+            <div class="col-sm mb-2 mb-sm-0">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-no-gutter">
+                  <li class="breadcrumb-item"><a class="breadcrumb-link" href="javascript:;">Pages</a></li>
+                  <li class="breadcrumb-item"><a class="breadcrumb-link" href="javascript:;">Account</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Billing</li>
+                </ol>
+              </nav>
+
+              <h1 class="page-header-title">Billing</h1>
+            </div>
+
+            <div class="col-sm-auto">
+              <a class="btn btn-primary" href="user-profile-my-profile.html">
+                <i class="tio-user mr-1"></i> My profile
+              </a>
+            </div>
+          </div>
+          <!-- End Row -->
+        </div>
+        <!-- End Page Header -->
+
+        <div class="row justify-content-lg-center">
+          <div class="col-lg-9">
+
+            <div class="card mb-3 mb-lg-5">
+              <!-- Header -->
+              <div class="card-header">
+                <h4 class="card-header-title">Payment method</h4>
+              </div>
+              <!-- End Header -->
+
+              <!-- Body -->
+              <div class="card-body">
+                <div class="mb-4">
+                  <p>Cards will be charged either at the end of the month or whenever your balance exceeds the usage threshold. All major credit / debit cards accepted.</p>
+                </div>
+
+                <!-- List Group -->
+                <ul class="list-group mb-3">
+                  <!-- List Item -->
+                  <li class="list-group-item">
+                    <h4>Mark Williams <span class="badge badge-primary badge-pill text-uppercase ml-1">Primary</span></h4>
+
+                    <div class="media">
+                      <img class="avatar avatar-sm avatar-4by3 mr-3" src="{% static 'frontdash/svg/brands/mastercard.svg' %}" alt="Image Description">
+
+                      <div class="media-body">
+                        <div class="row">
+                          <div class="col-sm mb-2 mb-sm-0">
+                            <span class="d-block text-dark">MasterCard &bull;&bull;&bull;&bull; 4242</span>
+                            <small class="d-block text-muted">Checking - Expires 12/22</small>
+                          </div>
+
+                          <div class="col-sm-auto">
+                            <div class="d-flex justify-content-sm-end">
+                              <a class="btn btn-xs btn-white mr-2" href="javascript:;" data-toggle="modal" data-target="#editCardModal">
+                                <i class="tio-edit mr-1"></i> Edit
+                              </a>
+
+                              <button type="button" class="btn btn-xs btn-white">
+                                <i class="tio-delete-outlined mr-1"></i> Delete
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End Row -->
+                      </div>
+                    </div>
+                  </li>
+                  <!-- End List Item -->
+
+                  <!-- List Item -->
+                  <li class="list-group-item">
+                    <h4>Mark Williams <span class="text-danger ml-1">Expired</span></h4>
+
+                    <div class="media">
+                      <img class="avatar avatar-sm avatar-4by3 mr-3" src="{% static 'frontdash/svg/brands/visa.svg' %}" alt="Image Description">
+
+                      <div class="media-body">
+                        <div class="row">
+                          <div class="col-sm mb-2 mb-sm-0">
+                            <span class="d-block text-dark">Visa &bull;&bull;&bull;&bull; 9016</span>
+                            <small class="d-block text-muted">Prepaid - Expires 04/20</small>
+                          </div>
+
+                          <div class="col-sm-auto">
+                            <div class="d-flex justify-content-sm-end">
+                              <a class="btn btn-xs btn-white mr-2" href="javascript:;" data-toggle="modal" data-target="#editCardModal">
+                                <i class="tio-edit mr-1"></i> Edit
+                              </a>
+
+                              <button type="button" class="btn btn-xs btn-white">
+                                <i class="tio-delete-outlined mr-1"></i> Delete
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- End Row -->
+                      </div>
+                    </div>
+                  </li>
+                  <!-- End List Item -->
+                </ul>
+                <!-- End List Group -->
+
+                <div class="row">
+                  <div class="col-lg-6">
+                    <!-- Card -->
+                    <a class="card card-dashed h-100" href="javascript:;" data-toggle="modal" data-target="#addCardModal">
+                      <div class="card-body card-body-centered card-dashed-body">
+                        <img class="avatar avatar-xl avatar-4by3 mb-2" src="{% static 'frontdash/svg/illustrations/credit-card.svg' %}" alt="Image Description">
+                        <span class="text-primary text-hover-primary">
+                          <i class="tio-add"></i> Add a new card
+                        </span>
+                      </div>
+                    </a>
+                    <!-- End Card -->
+                  </div>
+                </div>
+                <!-- End Row -->
+              </div>
+              <!-- End Body -->
+            </div>
+            <!-- End Card -->
+
+            <!-- Card -->
+            <div class="card">
+              <!-- Header -->
+              <div class="card-header">
+                <h4 class="card-header-title">Order history</h4>
+              </div>
+              <!-- End Header -->
+
+              <!-- Table -->
+              <div class="table-responsive">
+                <table class="table table-borderless table-thead-bordered table-nowrap table-align-middle card-table">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>Reference</th>
+                      <th>Type</th>
+                      <th>Amount</th>
+                      <th>Updated</th>
+                      <th>Invoice</th>
+                      <th style="width: 5%;"></th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td><a href="#">#3682303</a></td>
+                      <td>Standard</td>
+                      <td>$264</td>
+                      <td><a href="#">22/04/2020</a></td>
+                      <td>
+                        <a class="btn btn-sm btn-white" href="#">
+                          <i class="tio-download-to mr-1"></i> PDF
+                        </a>
+                      </td>
+                      <td>
+                        <div id="quickViewPopover" data-toggle="popover" data-placement="left" title="<div class='d-flex align-items-center'>Invoice receipt <a href='#!' class='close close-light ml-auto'><i id='closeQuickViewPopover' class='tio-clear'></i></a></div>" data-content="Check out this Invoice receipt modal example." data-html="true">
+                          <a class="btn btn-sm btn-white" href="javascript:;" data-toggle="modal" data-target="#invoiceReceiptModal">
+                            <i class="tio-visible-outlined mr-1"></i> Quick view
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="#">#2333234</a></td>
+                      <td>Standard</td>
+                      <td>$264</td>
+                      <td><a href="#">22/04/2019</a></td>
+                      <td>
+                        <a class="btn btn-sm btn-white" href="#">
+                          <i class="tio-download-to mr-1"></i> PDF
+                        </a>
+                      </td>
+                      <td>
+                        <a class="btn btn-sm btn-white" href="javascript:;" data-toggle="modal" data-target="#invoiceReceiptModal">
+                          <i class="tio-visible-outlined mr-1"></i> Quick view
+                        </a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td><a href="#">#9834283</a></td>
+                      <td>Standard</td>
+                      <td>$264</td>
+                      <td><a href="#">22/04/2018</a></td>
+                      <td>
+                        <a class="btn btn-sm btn-white" href="#">
+                          <i class="tio-download-to mr-1"></i> PDF
+                        </a>
+                      </td>
+                      <td>
+                        <a class="btn btn-sm btn-white" href="javascript:;" data-toggle="modal" data-target="#invoiceReceiptModal">
+                          <i class="tio-visible-outlined mr-1"></i> Quick view
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- End Table -->
+            </div>
+            <!-- End Card -->
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Content -->
+
+      <!-- Footer -->
+
+
+<!-- Add Card Modal -->
+    <div class="modal fade" id="addCardModal" tabindex="-1" role="dialog" aria-labelledby="addCardModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <!-- Header -->
+          <div class="modal-header">
+            <h4 id="addCardModalTitle" class="modal-title">Add card</h4>
+
+            <button type="button" class="btn btn-icon btn-sm btn-ghost-secondary" data-dismiss="modal" aria-label="Close">
+              <i class="tio-clear tio-lg"></i>
+            </button>
+          </div>
+          <!-- End Header -->
+
+          <!-- Body -->
+          <div class="modal-body">
+            <form>
+              <!-- Button Group -->
+
+              <!-- End Button Group -->
+
+              <!-- Form Group -->
+              <div class="form-group">
+                <label for="cardNameLabel" class="input-label">Name on card</label>
+                <input type="text" class="form-control" id="cardNameLabel" placeholder="Payoneer" aria-label="Payoneer">
+              </div>
+              <!-- End Form Group -->
+
+              <!-- Form Group -->
+              <div class="form-group">
+                <label for="cardNumberLabel" class="input-label">Card number</label>
+                <input type="text" class="js-masked-input form-control" name="cardNumber" id="cardNumberLabel" placeholder="xxxx xxxx xxxx xxxx" aria-label="xxxx xxxx xxxx xxxx"
+                       data-hs-mask-options='{
+                        "template": "0000 0000 0000 0000"
+                      }'>
+              </div>
+              <!-- End Form Group -->
+
+              <div class="row">
+                <div class="col-sm-6">
+                  <!-- Form Group -->
+                  <div class="form-group">
+                    <label for="expirationDateLabel" class="input-label">Expiration date</label>
+                    <input type="text" class="js-masked-input form-control" name="expirationDate" id="expirationDateLabel" placeholder="xx/xxxx" aria-label="xx/xxxx"
+                           data-hs-mask-options='{
+                            "template": "00/0000"
+                          }'>
+                  </div>
+                  <!-- End Form Group -->
+                </div>
+
+                <div class="col-sm-6">
+                  <!-- Form Group -->
+                  <div class="form-group">
+                    <label for="securityCodeLabel" class="input-label">CVV Code <i class="far fa-question-circle text-body ml-1" data-toggle="tooltip" data-placement="top" title="A 3 - digit number, typically printed on the back of a card."></i></label>
+                    <input type="text" class="js-masked-input form-control" name="securityCode" id="securityCodeLabel" placeholder="xxx" aria-label="xxx"
+                           data-hs-mask-options='{
+                            "template": "000"
+                          }'>
+                  </div>
+                  <!-- End Form Group -->
+                </div>
+              </div>
+              <!-- End Row -->
+
+              <!-- Custom Checkbox -->
+              <div class="custom-control custom-checkbox form-group">
+                <input type="checkbox" class="custom-control-input" id="makePrimaryCheckbox1">
+                <label class="custom-control-label" for="makePrimaryCheckbox1">Make this primary card</label>
+              </div>
+              <!-- End Custom Checkbox -->
+
+              <div class="d-flex justify-content-end">
+                <button type="button" class="btn btn-white mr-2" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </form>
+          </div>
+          <!-- End Body -->
+        </div>
+      </div>
+    </div>
+
+
+
+      <!-- End Footer -->
+
+{% endblock %}

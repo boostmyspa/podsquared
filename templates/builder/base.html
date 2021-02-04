@@ -1,0 +1,302 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Title -->
+  <title>Default Sidebar (Classic) - Sidebar Combinations | Front - Admin &amp; Dashboard Template</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../favicon.ico">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS Implementing Plugins -->
+  <link rel="stylesheet" href="{% static 'frontdash/vendor/icon-set/style.css' %}">
+
+  <!-- CSS Front Template -->
+  <link rel="stylesheet" href="{% static 'frontdash/css/theme.min.css' %}">
+        <!-- Customizer styles and scripts-->
+    <link rel="stylesheet" media="screen" href="{% static 'mstore/css/glamour.css' %}">
+
+</head>
+<body>
+  <!-- ========== HEADER ========== -->
+  <header id="header" class="navbar navbar-expand-lg navbar-fixed navbar-height navbar-flush navbar-container navbar-bordered  ">
+    <div class="container">
+      <div class="js-mega-menu navbar-nav-wrap">
+        <div class="navbar-brand-wrapper">
+          <!-- Logo -->
+
+
+            <a class="navbar-brand" href="/dashboard" aria-label="Front">
+              <img class="navbar-brand-logo" src="{% static 'pod2.png' %}" alt="Logo">
+            </a>
+
+          <!-- End Logo -->
+        </div>
+        <!-- End Secondary Content -->
+
+        <!-- Navbar -->
+        <div class="navbar-nav-wrap-content-left" id="navbarNavMenu">
+            {% block steps %}
+            <ul class="steps__count navbar-nav flex-grow-1" style="border-bottom:none;">
+                <li class="visited"><a href="{% static 'mstore/glamour-design.html' %}">Design</a></li>
+                <li class="visited"><a href="{% static 'mstore/glamour-customize.html' %}">Customize</a></li>
+                <li class="current"><a href="{% static 'mstore/glamour-change.html' %}">Change</a></li>
+            </ul>
+            {% endblock %}
+
+
+        </div>
+        <!-- End Navbar -->
+      </div>
+    </div>
+  </header>
+  <style>
+
+    .form-group {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+  </style>
+  <!-- ========== END HEADER ========== -->
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main id="content" role="main" class="main">
+    <!-- Content -->
+      {% block content %}
+<section class="glamour">
+    <div class="glamour__wrapper w-100">
+        <div class="step_small d-block d-sm-none">
+            <span>Step 3</span>
+            <p>Change</p>
+        </div>
+        <div class="content_glamour">
+            <div class="row no-gutters w-100 h-100">
+                <div class="col-xl-8 col-md-7">
+                    <div class="img__glamour">
+                        <img src="{% static 'mstore/img/img__shirt.png' %}" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-5">
+                    <div class="sidebar__glamour">
+
+                        <div class="glamour__body__content">
+                            <h3 class="title__glamour">Select Your Products</h3>
+                            <div class="card__product">
+                                <div class="media">
+                                    <div class="product__img">
+                                        <img src="{% static 'mstore/img/img__pro1.png' %}" alt="">
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="title--product">
+                                            <h3>Premium Comfort Shirt</h3>
+                                            <a href="#" class="action__pro">Remove</a>
+                                        </div>
+                                        <div class="select__size">
+                                            <div class="color__box" style="margin-top:0px;">
+                                                <h4>Select Your Colors</h4>
+                                                <ul class="color__list">
+                                                    <li>
+                                                        <div>
+                                                            <input id="checkbox-0" class="checkbox-style" name="checkbox-1" type="checkbox">
+                                                            <label for="checkbox-0" class="checkbox-style-3-label">
+                                                                <span class="clr-grey"><img src="{% static 'mstore/img/correct.svg'%}" alt=""></span>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div>
+                                                            <input id="checkbox-1" class="checkbox-style" name="checkbox-1" type="checkbox">
+                                                            <label for="checkbox-1" class="checkbox-style-3-label">
+                                                                <span class="clr-d-brown"><img src="{% static 'mstore/img/correct.svg'%}" alt=""></span>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div>
+                                                            <input id="checkbox-2" class="checkbox-style" name="checkbox-1" type="checkbox">
+                                                            <label for="checkbox-2" class="checkbox-style-3-label">
+                                                                <span class="clr-orange"><img src="{% static 'mstore/img/correct.svg'%}" alt=""></span>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div>
+                                                            <input id="checkbox-3" class="checkbox-style" name="checkbox-1" type="checkbox">
+                                                            <label for="checkbox-3" class="checkbox-style-3-label">
+                                                                <span class="clr-l-brown"><img src="{% static 'mstore/img/correct.svg'%}" alt=""></span>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div>
+                                                            <input id="checkbox-4" class="checkbox-style" name="checkbox-1" type="checkbox">
+                                                            <label for="checkbox-4" class="checkbox-style-3-label">
+                                                                <span class="clr-brown"><img src="{% static 'mstore/img/correct.svg'%}" alt=""></span>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="btn__holder">
+                                <a href="#" class="btn btn-outline-secondary w-100"><img src="img/more.svg" alt=""> Add More Product</a>
+                                <a href="#" class="btn btn-primary w-100 cta-pink">Create an Order</a>
+
+                                <p class="note_deleivery">
+                                    Guaranteed Delivery before Father's Day!
+
+                                </p>
+                            </div>
+                            <div class="help__card__content">
+                                <h3>Need Help?</h3>
+
+                                <div id="accordion">
+                                    <div class="card__help">
+                                        <div class="card__help__header" id="headingOne">
+                                            <a href="#"class="collapsed"  data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                                <span><img src="img/tshirt__icon.svg" alt=""> Sizing Chart</span>
+                                                <img src="img/next.svg" alt="" class="next__a ml-auto">
+                                            </a>
+                                        </div>
+
+                                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                            <div class="card__help__body">
+                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card__help">
+                                        <div class="card__help__header" id="headingTwo">
+                                            <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                <span><img src="img/tshirt__icon.svg" alt="">Product Information</span>
+
+                                                <img src="img/next.svg" alt="" class="next__a ml-auto">
+                                            </a>
+                                        </div>
+                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                            <div class="card__help__body">
+                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+      {% endblock %}
+    <!-- End Content -->
+  </main>
+  <!-- ========== END MAIN CONTENT ========== -->
+
+  <!-- ========== SECONDARY CONTENTS ========== -->
+  <!-- Welcome Message Modal -->
+  <div class="modal fade" id="welcomeMessageModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <!-- Header -->
+        <div class="modal-close">
+          <button type="button" class="btn btn-icon btn-sm btn-ghost-secondary" data-dismiss="modal" aria-label="Close">
+            <i class="tio-clear tio-lg"></i>
+          </button>
+        </div>
+        <!-- End Header -->
+
+        <!-- Body -->
+        <div class="modal-body p-sm-5">
+          <div class="text-center">
+            <div class="w-75 w-sm-50 mx-auto mb-4">
+              <img class="img-fluid" src="{% static 'frontdash/svg/illustrations/graphs.svg' %}" alt="Image Description">
+            </div>
+
+            <h4 class="h1">Welcome to Front</h4>
+
+            <p>We're happy to see you in our community.</p>
+          </div>
+        </div>
+        <!-- End Body -->
+
+        <!-- Footer -->
+        <div class="modal-footer d-block text-center py-sm-5">
+          <small class="text-cap mb-4">Trusted by the world's best teams</small>
+
+          <div class="w-85 mx-auto">
+            <div class="row justify-content-between">
+              <div class="col">
+                <img class="img-fluid ie-welcome-brands" src="{% static 'frontdash/svg/brands/gitlab-gray.svg' %}" alt="Image Description">
+              </div>
+              <div class="col">
+                <img class="img-fluid ie-welcome-brands" src="{% static 'frontdash/svg/brands/fitbit-gray.svg' %}" alt="Image Description">
+              </div>
+              <div class="col">
+                <img class="img-fluid ie-welcome-brands" src="{% static 'frontdash/svg/brands/flow-xo-gray.svg' %}" alt="Image Description">
+              </div>
+              <div class="col">
+                <img class="img-fluid ie-welcome-brands" src="{% static 'frontdash/svg/brands/layar-gray.svg' %}" alt="Image Description">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Footer -->
+      </div>
+    </div>
+  </div>
+  <!-- End Welcome Message Modal -->
+  <!-- ========== END SECONDARY CONTENTS ========== -->
+ <!-- JS Global Compulsory  -->
+  <script src="{% static 'frontdash/vendor/jquery/dist/jquery.min.js' %}"></script>
+  <script src="{% static 'frontdash/vendor/jquery-migrate/dist/jquery-migrate.min.js' %}"></script>
+  <script src="{% static 'frontdash/vendor/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+
+  <!-- JS Implementing Plugins -->
+  <script src="{% static 'frontdash/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js' %}"></script>
+  <script src="{% static 'frontdash/vendor/hs-unfold/dist/hs-unfold.min.js' %}"></script>
+  <script src="{% static 'frontdash/vendor/hs-form-search/dist/hs-form-search.min.js' %}"></script>
+
+  <!-- JS Front -->
+  <script src="{% static 'frontdash/js/theme.min.js' %}"></script>
+
+  <!-- JS Plugins Init. -->
+  <script>
+    $(document).on('ready', function () {
+      // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+      // =======================================================
+      var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+
+      // INITIALIZATION OF UNFOLD
+      // =======================================================
+      $('.js-hs-unfold-invoker').each(function () {
+        var unfold = new HSUnfold($(this)).init();
+      });
+
+
+      // INITIALIZATION OF FORM SEARCH
+      // =======================================================
+      $('.js-form-search').each(function () {
+        new HSFormSearch($(this)).init()
+      });
+    });
+  </script>
+
+  <!-- IE Support -->
+  <script>
+    if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="{% static 'frontdash/vendor/babel-polyfill/polyfill.min.js' %}"><\/script>');
+  </script>
+</body>
+</html>

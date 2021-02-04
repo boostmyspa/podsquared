@@ -1,0 +1,240 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>MStore | Modern Bootstrap E-commerce Template
+    </title>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="MStore - Modern Bootstrap E-commerce Template">
+    <meta name="keywords"
+          content="bootstrap, shop, e-commerce, market, modern, responsive,  business, mobile, bootstrap 4, html5, css3, jquery, js, gallery, slider, touch, creative, clean">
+    <meta name="author" content="Createx Studio">
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'mstore/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'mstore/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'mstore/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'mstore/site.webmanifest' %}">
+    <link rel="mask-icon" color="#111" href="{% static 'mstore/safari-pinned-tab.svg' %}">
+    <meta name="msapplication-TileColor" content="#111">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Vendor Styles including: Font Icons, Plugins, etc.-->
+    <link rel="stylesheet" media="screen" href="{% static 'mstore/css/vendor.min.css' %}">
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" id="main-styles" href="{% static 'mstore/css/theme.min.css' %}">
+    <!-- Customizer styles and scripts-->
+    <link rel="stylesheet" media="screen" href="{% static 'mstore/css/glamour.css' %}">
+    <link rel="stylesheet" media="screen" href="{% static 'mstore/css/skins/theme-7d51cb-rounded.min.css' %}">
+
+</head>
+<!-- Body-->
+
+<body style="height:100%">
+
+<header class="navbar navbar-expand-lg navbar-light fixed-top bg-light" style="height:5rem!important">
+    <div class="container-fluid navbar-inner">
+        <!-- navbar brand--><a class="navbar-brand" style="min-width: 100px;" href="{% static 'mstore/index.html' %}"><img width="100"
+                                                                                                                           src="{% static 'mstore/img/logo-dark.png' %}" alt="MStore" /></a>
+        <!-- navbar collapse area-->
+        <div class="collapse navbar-collapse" id="menu">
+            <!-- Site menu-->
+            <ul class="steps__count w-100" style="border-bottom:none;">
+                <li class="visited"><a href="{% static 'mstore/glamour-design.html' %}">Design</a></li>
+                <li class="visited"><a href="{% static 'mstore/glamour-customize.html' %}">Customize</a></li>
+                <li class="current"><a href="{% static 'mstore/glamour-change.html' %}">Change</a></li>
+            </ul>
+        </div>
+        <!-- navbar buttons-->
+        <div class="navbar-btns">
+            <div class="navbar-btns-inner">
+                <a class="navbar-btn" href="#offcanvas-cart"
+            data-toggle="offcanvas"><span class="d-block position-relative"><span
+                class="navbar-btn-badge bg-primary text-light">4</span><i class="mx-auto mb-1"
+                data-feather="shopping-cart"></i>$325.00</span></a>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Page Content-->
+<section class="glamour">
+    <div class="glamour__wrapper w-100">
+        <div class="step_small d-block d-sm-none">
+            <span>Step 3</span>
+            <p>Change</p>
+        </div>
+        <div class="content_glamour">
+            <div class="row no-gutters w-100 h-100">
+                <div class="col-xl-8 col-md-7">
+                    <div class="img__glamour">
+                        <img src="{% static 'mstore/img/img__shirt.png' %}" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-5">
+                    <div class="sidebar__glamour">
+
+                        <div class="glamour__body__content">
+                            <h3 class="title__glamour">Select Your Products</h3>
+                            <div class="card__product">
+                                <div class="media">
+                                    <div class="product__img">
+                                        <img src="{% static 'mstore/img/img__pro1.png' %}" alt="">
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="title--product">
+                                            <h3>Premium Comfort Shirt</h3>
+                                            <a href="#" class="action__pro">Remove</a>
+                                        </div>
+                                        <div class="select__size">
+                                            <div class="color__box" style="margin-top:0px;">
+                                                <h4>Select Your Colors</h4>
+                                                <ul class="color__list">
+                                                    <li>
+                                                        <div>
+                                                            <input id="checkbox-0" class="checkbox-style" name="checkbox-1" type="checkbox">
+                                                            <label for="checkbox-0" class="checkbox-style-3-label">
+                                                                <span class="clr-grey"><img src="{% static 'mstore/img/correct.svg'%}" alt=""></span>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div>
+                                                            <input id="checkbox-1" class="checkbox-style" name="checkbox-1" type="checkbox">
+                                                            <label for="checkbox-1" class="checkbox-style-3-label">
+                                                                <span class="clr-d-brown"><img src="{% static 'mstore/img/correct.svg'%}" alt=""></span>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div>
+                                                            <input id="checkbox-2" class="checkbox-style" name="checkbox-1" type="checkbox">
+                                                            <label for="checkbox-2" class="checkbox-style-3-label">
+                                                                <span class="clr-orange"><img src="{% static 'mstore/img/correct.svg'%}" alt=""></span>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div>
+                                                            <input id="checkbox-3" class="checkbox-style" name="checkbox-1" type="checkbox">
+                                                            <label for="checkbox-3" class="checkbox-style-3-label">
+                                                                <span class="clr-l-brown"><img src="{% static 'mstore/img/correct.svg'%}" alt=""></span>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div>
+                                                            <input id="checkbox-4" class="checkbox-style" name="checkbox-1" type="checkbox">
+                                                            <label for="checkbox-4" class="checkbox-style-3-label">
+                                                                <span class="clr-brown"><img src="{% static 'mstore/img/correct.svg'%}" alt=""></span>
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="btn__holder">
+                                <a href="#" class="btn btn-outline-secondary w-100"><img src="img/more.svg" alt=""> Add More Product</a>
+                                <a href="#" class="btn btn-primary w-100 cta-pink">Create an Order</a>
+
+                                <p class="note_deleivery">
+                                    Guaranteed Delivery before Father's Day!
+
+                                </p>
+                            </div>
+                            <div class="help__card__content">
+                                <h3>Need Help?</h3>
+
+                                <div id="accordion">
+                                    <div class="card__help">
+                                        <div class="card__help__header" id="headingOne">
+                                            <a href="#"class="collapsed"  data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                                <span><img src="img/tshirt__icon.svg" alt=""> Sizing Chart</span>
+                                                <img src="img/next.svg" alt="" class="next__a ml-auto">
+                                            </a>
+                                        </div>
+
+                                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                            <div class="card__help__body">
+                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card__help">
+                                        <div class="card__help__header" id="headingTwo">
+                                            <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                <span><img src="img/tshirt__icon.svg" alt="">Product Information</span>
+
+                                                <img src="img/next.svg" alt="" class="next__a ml-auto">
+                                            </a>
+                                        </div>
+                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                            <div class="card__help__body">
+                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Back To Top Button--><a class="scroll-to-top-btn" href="{% static 'mstore/#' %}"><i class="scroll-to-top-btn-icon"
+                                                                                         data-feather="chevron-up"></i></a>
+<!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
+<script src="{% static 'mstore/js/vendor.min.js' %}"></script>
+<script src="{% static 'mstore/js/theme.min.js' %}"></script>
+<script>
+    $(document).ready(function () {
+        $('.glamour_slide').owlCarousel({
+            loop: true,
+            margin: 10,
+            dots: false,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items:2,
+                    nav: true,
+                    stagePadding: 20,
+                },
+
+                576: {
+                    items: 3,
+                    nav: true,
+                    stagePadding: 20,
+                },
+                768: {
+                    items: 2,
+                    nav: true,
+                    stagePadding: 20,
+                },
+                992: {
+                    items: 3,
+                    nav: true,
+                    stagePadding: 20,
+                },
+                1200: {
+                    items: 3,
+                    nav: true,
+                    loop: false,
+                    margin: 16,
+                    stagePadding: 20,
+                }
+            }
+        })
+    })
+</script>
+</body>
+
+</html>

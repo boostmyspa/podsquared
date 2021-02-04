@@ -1,0 +1,181 @@
+{% extends "builder/base.html" %}
+{% load static %}
+            {% block steps %}
+            <ul class="steps__count navbar-nav flex-grow-1" style="border-bottom:none;">
+                <li class="visited"><a href="{% static 'mstore/glamour-design.html' %}">Design</a></li>
+                <li class="current"><a href="{% static 'mstore/glamour-customize.html' %}">Select Products</a></li>
+                <li class=""><a href="{% static 'mstore/glamour-change.html' %}">Select Quantity</a></li>
+            </ul>
+            {% endblock %}
+      {% block content %}
+<section class="glamour">
+    <div class="glamour__wrapper w-100">
+        <div class="step_small d-block d-sm-none">
+            <span>Step 3</span>
+            <p>Change</p>
+        </div>
+        <div class="content_glamour">
+            <div class="row no-gutters w-100 h-100">
+                <div class="col-xl-8 col-md-7">
+                    <div class="glamour__body__content p-lg-5 p-1">
+                        <h4>Select the Quantities for this Order</h4>
+                        <div class="card__product">
+                            <div class="media">
+                                <div class="product__img">
+                                    <img src="{% static 'mstore/img/img__pro1.png' %}" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <div class="title--product">
+                                        <h3>Premium Comfort Shirt</h3>
+                                        <a href="#" class="action__pro">Remove</a>
+                                    </div>
+                                    <div class="select__size">
+                                        <div class="color__box" style="margin-top:0px;">
+                                            <h4>Select Your Colors</h4>
+                                            <div class="row">
+                                                <div class="col-3 col-lg-1 form-group">
+                                                    <label for="validationCustom01">S</label>
+                                                    <input class="form-control" type="number" value="" required>
+                                                </div><div class="col-3 col-lg-1 form-group">
+                                                <label for="validationCustom01">M</label>
+                                                <input class="form-control" type="number" value="" required>
+                                            </div>
+                                                <div class="col-3 col-lg-1 form-group">
+                                                    <label for="validationCustom01">L</label>
+                                                    <input class="form-control" type="number" value="" required>
+                                                </div>
+                                                <div class="col-3 col-lg-1 form-group">
+                                                    <label for="validationCustom01">XL</label>
+                                                    <input class="form-control" type="number" value="" required>
+                                                </div>
+                                                <div class="col-3 col-lg-1 form-group">
+                                                    <label for="validationCustom01">2XL <small>(+$2)</small></label>
+                                                    <input class="form-control" type="number" value="" required>
+                                                </div>
+                                                <div class="col-3 col-lg-1 form-group">
+                                                    <label for="validationCustom01">3XL <small>(+$2)</small></label>
+                                                    <input class="form-control" type="number" value="" required>
+                                                </div>
+                                                <div class="col-3 col-lg-1 form-group">
+                                                    <label for="validationCustom01">4XL <small>(+$2)</small></label>
+                                                    <input class="form-control" type="number" value="" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="media">
+                                <div class="product__img">
+                                    <img src="{% static 'mstore/img/img__pro1.png' %}" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <div class="title--product">
+                                        <h3>Premium Comfort Shirt</h3>
+                                        <a href="#" class="action__pro">Remove</a>
+                                    </div>
+                                    <div class="select__size">
+                                        <div class="color__box" style="margin-top:0px;">
+                                            <h4>Select Your Colors</h4>
+                                            <div class="row">
+                                                <div class="col-3 col-lg-1 form-group">
+                                                    <label for="validationCustom01">S</label>
+                                                    <input class="form-control" type="number" value="" required>
+                                                </div><div class="col-3 col-lg-1 form-group">
+                                                <label for="validationCustom01">M</label>
+                                                <input class="form-control" type="number" value="" required>
+                                            </div>
+                                                <div class="col-3 col-lg-1 form-group">
+                                                    <label for="validationCustom01">L</label>
+                                                    <input class="form-control" type="number" value="" required>
+                                                </div>
+                                                <div class="col-3 col-lg-1 form-group">
+                                                    <label for="validationCustom01">XL</label>
+                                                    <input class="form-control" type="number" value="" required>
+                                                </div>
+                                                <div class="col-3 col-lg-1 form-group">
+                                                    <label for="validationCustom01">2XL <small>(+$2)</small></label>
+                                                    <input class="form-control" type="number" value="" required>
+                                                </div>
+                                                <div class="col-3 col-lg-1 form-group">
+                                                    <label for="validationCustom01">3XL <small>(+$2)</small></label>
+                                                    <input class="form-control" type="number" value="" required>
+                                                </div>
+                                                <div class="col-3 col-lg-1 form-group">
+                                                    <label for="validationCustom01">4XL <small>(+$2)</small></label>
+                                                    <input class="form-control" type="number" value="" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <a href="#" class="btn btn-primary w-100 cta-pink mt-3">Proceed to Shipping</a>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-5">
+                    <div class="sidebar__glamour">
+
+                        <div class="glamour__body__content">
+                            <h3 class="title__glamour">Order Summary</h3>
+                            <div>
+                                We’ve got your back.
+
+Our experts will review your design to make sure it prints perfectly.
+
+Talk to a human
+                            </div>
+                            <div class="btn__holder">
+
+                                <p class="note_deleivery">
+                                    Guaranteed Delivery before Father's Day!
+
+                                </p>
+                            </div>
+                            <div class="help__card__content">
+                                <h3>Need Help?</h3>
+
+                                <div id="accordion">
+                                    <div class="card__help">
+                                        <div class="card__help__header" id="headingOne">
+                                            <a href="#"class="collapsed"  data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                                <span><img src="img/tshirt__icon.svg" alt=""> Sizing Chart</span>
+                                                <img src="img/next.svg" alt="" class="next__a ml-auto">
+                                            </a>
+                                        </div>
+
+                                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                            <div class="card__help__body">
+                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card__help">
+                                        <div class="card__help__header" id="headingTwo">
+                                            <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                <span><img src="img/tshirt__icon.svg" alt="">Product Information</span>
+
+                                                <img src="img/next.svg" alt="" class="next__a ml-auto">
+                                            </a>
+                                        </div>
+                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                            <div class="card__help__body">
+                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+      {% endblock %}

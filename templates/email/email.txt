@@ -1,0 +1,6 @@
+New Lead Notification:\r\n
+\r\n
+\r\n
+{% for key, value in params.items %}
+{{ key }}: {{ value }}\r\n
+{% endfor %}

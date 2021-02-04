@@ -1,0 +1,1694 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>MStore | Modern Bootstrap E-commerce Template
+    </title>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="MStore - Modern Bootstrap E-commerce Template">
+    <meta name="keywords"
+          content="bootstrap, shop, e-commerce, market, modern, responsive,  business, mobile, bootstrap 4, html5, css3, jquery, js, gallery, slider, touch, creative, clean">
+    <meta name="author" content="Createx Studio">
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'mstore/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'mstore/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'mstore/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'mstore/site.webmanifest' %}">
+    <link rel="mask-icon" color="#111" href="{% static 'mstore/safari-pinned-tab.svg' %}">
+    <meta name="msapplication-TileColor" content="#111">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Vendor Styles including: Font Icons, Plugins, etc.-->
+    <link rel="stylesheet" media="screen" href="{% static 'mstore/css/vendor.min.css' %}">
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" id="main-styles" href="{% static 'mstore/css/theme.min.css' %}">
+    <!-- Customizer styles and scripts-->
+    <link rel="stylesheet" media="screen" href="{% static 'mstore/css/glamour.css' %}">
+    <link rel="stylesheet" media="screen" href="{% static 'mstore/css/skins/theme-7d51cb-rounded.min.css' %}">
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <symbol id="accountsPreferences" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 11.667v1.666a5 5 0 00-5 5H3.333A6.667 6.667 0 0110 11.667zm0-.834c-2.763 0-5-2.237-5-5 0-2.762 2.237-5 5-5a5 5 0 015 5c0 2.763-2.238 5-5 5zm0-1.666A3.332 3.332 0 1010 2.5a3.332 3.332 0 100 6.667zm2.162 6.51a2.924 2.924 0 010-1.353l-.827-.477.834-1.444.826.478a2.914 2.914 0 011.171-.677v-.954h1.667v.954a2.91 2.91 0 011.17.677l.828-.478.833 1.444-.827.477c.106.445.106.908 0 1.352l.827.477-.834 1.444-.826-.478a2.913 2.913 0 01-1.171.677v.954h-1.667v-.954a2.914 2.914 0 01-1.17-.677l-.827.478-.834-1.444.827-.476zM15 16.25a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5z" fill="#fff" opacity=".5"></path>
+      </symbol>
+
+      <symbol id="accountUsers" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.086 10.453a5.001 5.001 0 005.45-8.155 5 5 0 10-5.45 8.155z"></path>
+        <path opacity=".4" d="M16.666 18.333H3.333v-1.666A4.167 4.167 0 017.5 12.5h5a4.167 4.167 0 014.166 4.167v1.666z"></path>
+      </symbol>
+
+      <symbol id="accountUsersLight" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.666 18.333H3.333v-1.666A4.167 4.167 0 017.5 12.5h5a4.167 4.167 0 014.166 4.167v1.666zM10 10.833a5 5 0 110-9.999 5 5 0 010 10z" fill="#000"></path>
+        <path d="M16.666 18.333H3.333v-1.666A4.167 4.167 0 017.5 12.5h5a4.167 4.167 0 014.166 4.167v1.666z" fill="#fff" fill-opacity=".4"></path>
+      </symbol>
+
+      <symbol id="addUsersBlue" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4.5 8.552c0 1.995 1.505 3.5 3.5 3.5s3.5-1.505 3.5-3.5-1.505-3.5-3.5-3.5-3.5 1.505-3.5 3.5zM19 8h-2v3h-3v2h3v3h2v-3h3v-2h-3V8zM4 19h10v-1c0-2.757-2.243-5-5-5H7c-2.757 0-5 2.243-5 5v1h2z" fill="#0A5DFF"></path>
+      </symbol>
+
+      <symbol id="addUser" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4.5 8.552C4.5 10.547 6.005 12.052 8 12.052C9.995 12.052 11.5 10.547 11.5 8.552C11.5 6.557 9.995 5.052 8 5.052C6.005 5.052 4.5 6.557 4.5 8.552ZM19 8H17V11H14V13H17V16H19V13H22V11H19V8ZM4 19H14V18C14 15.243 11.757 13 9 13H7C4.243 13 2 15.243 2 18V19H4Z" fill="#B2B2B2"></path>
+      </symbol>
+
+      <symbol id="addContacts" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4.5 8.552c0 1.995 1.505 3.5 3.5 3.5s3.5-1.505 3.5-3.5-1.505-3.5-3.5-3.5-3.5 1.505-3.5 3.5zM19 8h-2v3h-3v2h3v3h2v-3h3v-2h-3V8zM4 19h10v-1c0-2.757-2.243-5-5-5H7c-2.757 0-5 2.243-5 5v1h2z" fill="#B2B2B2"></path>
+      </symbol>
+
+      <symbol id="appIcon" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5.833 9.583a3.75 3.75 0 110-7.5 3.75 3.75 0 010 7.5zm0 8.334a3.75 3.75 0 110-7.5 3.75 3.75 0 010 7.5zm8.334-8.334a3.75 3.75 0 110-7.5 3.75 3.75 0 010 7.5zm0 8.334a3.75 3.75 0 110-7.5 3.75 3.75 0 010 7.5z" fill="#fff"></path>
+      </symbol>
+
+      <symbol id="attachment" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9.886 5.171l-3.77 3.772a.667.667 0 10.942.942l3.771-3.77a2 2 0 00-2.828-2.829L4.229 7.057a3.333 3.333 0 104.714 4.714L12.714 8l.943.942-3.771 3.771a4.667 4.667 0 01-6.6-6.6l3.772-3.77a3.333 3.333 0 014.713 4.713l-3.77 3.772A2 2 0 115.17 8l3.774-3.77.943.942z"></path>
+      </symbol>
+
+      <symbol id="attachmentBlue" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9.885 5.171l-3.77 3.772a.666.666 0 10.942.942l3.772-3.77A2 2 0 008 3.286L4.23 7.057a3.333 3.333 0 104.714 4.714L12.714 8l.943.943-3.772 3.771a4.667 4.667 0 01-6.6-6.6l3.772-3.77a3.333 3.333 0 014.714 4.713L8 10.829A2 2 0 115.17 8l3.772-3.771.942.942z" fill="#2F80ED"></path>
+      </symbol>
+
+      <symbol id="bankCard" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.5 2.5h15a.833.833 0 01.834.833v13.334a.833.833 0 01-.834.833h-15a.833.833 0 01-.833-.833V3.333A.833.833 0 012.5 2.5zm14.167 6.667H3.334v6.666h13.333V9.167zm0-1.667V4.167H3.334V7.5h13.333zm-5 5H15v1.667h-3.333V12.5z" fill="#fff" opacity=".5"></path>
+      </symbol>
+
+      <symbol id="barChartWidget" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.5 12.25H1.75a.583.583 0 01-.583-.583V7a.583.583 0 01.583-.583H3.5A.583.583 0 014.084 7v4.667a.583.583 0 01-.584.583zm4.084 0h-1.75a.583.583 0 01-.584-.583V1.75a.583.583 0 01.584-.583h1.75a.583.583 0 01.583.583v9.917a.583.583 0 01-.583.583zm4.083 0h-1.75a.583.583 0 01-.583-.583V5.25a.583.583 0 01.583-.583h1.75a.583.583 0 01.583.583v6.417a.583.583 0 01-.583.583z" fill="#fff"></path>
+      </symbol>
+
+      <symbol id="boxImg" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5.833 24.5h16.334a2.333 2.333 0 002.333-2.333V5.833A2.333 2.333 0 0022.167 3.5H5.833A2.333 2.333 0 003.5 5.833v16.334A2.333 2.333 0 005.833 24.5zm3.5-8.167l2.757 2.757 4.243-6.257L22.167 21H5.833l3.5-4.667z" fill="#000"></path>
+      </symbol>
+
+      <symbol id="calendar" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.75 2.25h3a.75.75 0 01.75.75v12a.75.75 0 01-.75.75H2.25A.75.75 0 011.5 15V3a.75.75 0 01.75-.75h3V.75h1.5v1.5h4.5V.75h1.5v1.5zm-1.5 1.5h-4.5v1.5h-1.5v-1.5H3v3h12v-3h-2.25v1.5h-1.5v-1.5zM15 8.25H3v6h12v-6z" fill="#000"></path>
+      </symbol>
+
+      <symbol id="checkboxChecked" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x=".5" y=".5" width="15" height="15" rx="2.5" fill="#0A5DFF" stroke="#0A5DFF"></rect>
+        <path d="M6.666 10.115l6.128-6.129.944.943L6.666 12 2.424 7.757l.942-.942 3.3 3.3z" fill="#fff"></path>
+      </symbol>
+
+      <symbol id="checkboxOff" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5" y="5" width="14" height="14" rx="1" fill="#fff" stroke="#EBEBEB" stroke-width="2"></rect>
+      </symbol>
+
+      <symbol id="checkboxOn" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5" y="5" width="14" height="14" rx="1" fill="#0A5DFF" stroke="#0A5DFF" stroke-width="2"></rect>
+        <g clip-path="url(#clip0)">
+          <path d="M11.293 13.122l-2.475-2.476-1.414 1.415 3.889 3.889 5.657-5.657-1.414-1.414-4.243 4.243z" fill="#fff"></path>
+        </g>
+        <defs>
+          <clipPath id="clip0">
+            <path fill="#fff" transform="translate(5 5)" d="M0 0h14v14H0z"></path>
+          </clipPath>
+        </defs>
+      </symbol>
+
+      <symbol id="chevronDownGrey" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.22 6.97L9 10.19 5.78 6.97 4.72 8.03 9 12.31l4.28-4.28-1.06-1.06z" fill="#B2B2B2"></path>
+      </symbol>
+
+      <symbol id="chevronDown" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 15l-4.243-4.243 1.415-1.414L12 12.172l2.828-2.829 1.415 1.414L12 15z" fill="#000"></path>
+      </symbol>
+
+      <symbol id="chevronDownBlack" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.22 6.97L9 10.19 5.78 6.97 4.72 8.03 9 12.31l4.28-4.28-1.06-1.06z" fill="#000"></path>
+      </symbol>
+
+      <symbol id="chevronLeft" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9.97 4.72L5.69 9l4.28 4.28 1.06-1.06L7.81 9l3.22-3.22-1.06-1.06z" fill="#000"></path>
+      </symbol>
+
+      <symbol id="chevronRight" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.03 13.28L12.31 9 8.03 4.72 6.97 5.78 10.19 9l-3.22 3.22 1.06 1.06z" fill="#000000"></path>
+      </symbol>
+
+      <symbol id="chevronRightBlue" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.03023 13.2803L12.3105 9.00001L8.03023 4.71976L6.96973 5.78026L10.1895 9.00001L6.96973 12.2198L8.03023 13.2803Z" fill="#0A5DFF"></path>
+      </symbol>
+
+      <symbol id="chevronRightGrey" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.03023 13.2802L12.3105 8.99998L8.03023 4.71973L6.96973 5.78023L10.1895 8.99998L6.96973 12.2197L8.03023 13.2802Z" fill="#B2B2B2"></path>
+      </symbol>
+
+      <symbol id="chevronRightWhite" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10.9767 9.99999L6.85168 5.87499L8.03002 4.69666L13.3334 9.99999L8.03002 15.3033L6.85168 14.125L10.9767 9.99999Z" fill="white"></path>
+      </symbol>
+
+      <symbol id="chevronUp" width="10" height="7" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.22 6.03L5 2.81 1.78 6.03.72 4.97 5 .69l4.28 4.28-1.06 1.06z" fill="#B2B2B2"></path>
+      </symbol>
+
+      <symbol id="chevronUpBlack" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5.78 11.03L9 7.81l3.22 3.22 1.06-1.06L9 5.69 4.72 9.97l1.06 1.06z" fill="#000"></path>
+      </symbol>
+
+      <symbol id="closeIcon" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10.795 4.23L7.966 7.056 5.138 4.23l-.943.943L7.023 8l-2.828 2.828.943.943 2.828-2.828 2.829 2.828.942-.943L8.91 8l2.828-2.828-.942-.943z" fill="#B2B2B2"></path>
+      </symbol>
+
+      <symbol id="darkOff" width="19" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 9.823A8.252 8.252 0 018.212.833 9.167 9.167 0 1018.99 11.611 8.253 8.253 0 0110 9.823z" fill="#000"></path>
+      </symbol>
+
+      <symbol id="darkOn" width="19" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 9.823A8.252 8.252 0 018.212.833 9.167 9.167 0 1018.99 11.611 8.253 8.253 0 0110 9.823z" fill="#FFA800"></path>
+      </symbol>
+
+      <symbol id="dashboard" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.333 10.833h5A.834.834 0 009.167 10V3.333a.833.833 0 00-.834-.833h-5a.833.833 0 00-.833.833V10a.833.833 0 00.833.833zM2.5 16.667a.833.833 0 00.833.833h5a.833.833 0 00.834-.833v-3.334a.833.833 0 00-.834-.833h-5a.833.833 0 00-.833.833v3.334zm8.333 0a.833.833 0 00.834.833h5a.833.833 0 00.833-.833v-5.834a.833.833 0 00-.833-.833h-5a.833.833 0 00-.834.833v5.834zm.834-8.334h5A.833.833 0 0017.5 7.5V3.333a.833.833 0 00-.833-.833h-5a.833.833 0 00-.834.833V7.5a.833.833 0 00.834.833z"></path>
+      </symbol>
+
+      <symbol id="dashboardLight" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.333 10.833h5A.834.834 0 009.167 10V3.333a.833.833 0 00-.834-.833h-5a.833.833 0 00-.833.833V10a.833.833 0 00.833.833zM2.5 16.667a.833.833 0 00.833.833h5a.833.833 0 00.834-.833v-3.334a.833.833 0 00-.834-.833h-5a.833.833 0 00-.833.833v3.334zm8.333 0a.833.833 0 00.834.833h5a.833.833 0 00.833-.833v-5.834a.833.833 0 00-.833-.833h-5a.833.833 0 00-.834.833v5.834zm.834-8.334h5A.833.833 0 0017.5 7.5V3.333a.833.833 0 00-.833-.833h-5a.833.833 0 00-.834.833V7.5a.833.833 0 00.834.833z" fill="#fff"></path>
+      </symbol>
+
+      <symbol id="desktop" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.666 10.667h10.667V3.333H2.666v7.334zm6 1.333v1.333h2.667v1.334H4.666v-1.334h2.667V12H1.994a.664.664 0 01-.661-.671V2.67c0-.37.303-.671.661-.671h12.011c.365 0 .661.3.661.671v8.658c0 .37-.303.671-.661.671H8.666z" fill="#000"></path>
+      </symbol>
+
+      <symbol id="filterBtn" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14.75 2.25h-12A.75.75 0 002 3v1.942c0 .393.16.778.437 1.056L6.5 10.06v5.69a.75.75 0 001.085.671l3-1.5A.75.75 0 0011 14.25v-4.19l4.063-4.062c.277-.278.437-.663.437-1.056V3a.75.75 0 00-.75-.75zM9.72 9.22a.747.747 0 00-.22.53v4.037l-1.5.75V9.75a.747.747 0 00-.22-.53L3.5 4.942V3.75H14l.002 1.187L9.72 9.22z"></path>
+      </symbol>
+
+      <symbol id="filterCheck" width="12" height="9" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4.666 7.115L10.794.986l.944.943L4.666 9 .424 4.757l.942-.942 3.3 3.3z" fill="#fff"></path>
+      </symbol>
+
+      <symbol id="greenCheck" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.5 11.379l6.894-6.895 1.06 1.06L7.5 13.5 2.727 8.727l1.06-1.06L7.5 11.379z" fill="#20C933"></path>
+      </symbol>
+
+      <symbol id="greenTopArrow" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.714 3.286a6.676 6.676 0 00-9.43 0 6.676 6.676 0 000 9.429 6.676 6.676 0 009.43 0 6.676 6.676 0 000-9.429zm-2.358 7.071L8.471 8.471 6.114 10.83l-.942-.943L7.528 7.53 5.643 5.644h4.713v4.714z" fill="#20C933"></path>
+      </symbol>
+
+      <symbol id="minusIcon" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.75 8.25h10.5v1.5H3.75v-1.5z" fill="#B2B2B2"></path>
+      </symbol>
+
+      <symbol id="greyMinus" width="8" height="2" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0v2h8V0H0z" fill="#000"></path>
+      </symbol>
+
+      <symbol id="minusCheck" width="8" height="2" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0v2h8V0H0z" fill="#000"></path>
+      </symbol>
+
+      <symbol id="minusCircle" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 1.333A6.674 6.674 0 001.333 8 6.674 6.674 0 008 14.667 6.674 6.674 0 0014.666 8 6.674 6.674 0 008 1.333zm3.333 7.334H4.666V7.333h6.667v1.334z" fill="#B2B2B2"></path>
+      </symbol>
+
+      <symbol id="minusSquare" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5" y="5" width="14" height="14" rx="1" fill="#EBEBEB" stroke="#EBEBEB" stroke-width="2"></rect>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 11v2h8v-2H8z" fill="#000"></path>
+      </symbol>
+
+      <symbol id="hbars" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.5 4.333h15V6h-15V4.333zm0 4.834h15v1.666h-15V9.167zM2.5 14h15v1.667h-15V14z" fill="#B2B2B2"></path>
+      </symbol>
+
+      <symbol id="integrations" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.5 10.832v5.835a.882.882 0 01-.22.589.714.714 0 01-.53.244h-6v-6.668h6.75zm-8.25 0V17.5h-6a.714.714 0 01-.53-.244.883.883 0 01-.22-.59v-5.834h6.75zm0-8.332v6.666H2.5V3.333c0-.22.079-.433.22-.589a.714.714 0 01.53-.244h6zm7.5 0c.199 0 .39.088.53.244a.88.88 0 01.22.59v5.832h-6.75V2.5h6z" fill="#000"></path>
+      </symbol>
+
+      <symbol id="lockIcon" width="12" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11.333 7c0-.735-.598-1.333-1.333-1.333h-.667v-2A3.337 3.337 0 006 .333a3.337 3.337 0 00-3.333 3.334v2H2C1.265 5.667.667 6.265.667 7v5.333c0 .736.598 1.334 1.333 1.334h8c.735 0 1.333-.598 1.333-1.334V7zM4 3.667c0-1.103.897-2 2-2s2 .897 2 2v2H4v-2z" fill="#EBEBEB"></path>
+      </symbol>
+
+      <symbol id="logOut" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.333 15H5v1.667h10V3.333H5V5H3.333V2.5a.833.833 0 01.833-.833h11.667a.833.833 0 01.833.833v15a.833.833 0 01-.833.833H4.166a.833.833 0 01-.833-.833V15zM5 9.167h5.833v1.666H5v2.5L.833 10 5 6.667v2.5z" fill="#fff" opacity=".5"></path>
+      </symbol>
+
+      <symbol id="message" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4.303 12.667L1.333 15V2.667A.667.667 0 012 2h12a.667.667 0 01.666.667V12a.667.667 0 01-.666.667H4.303zm.363-6V8H6V6.667H4.666zm2.667 0V8h1.333V6.667H7.333zm2.667 0V8h1.333V6.667H10z" fill="#fff"></path>
+      </symbol>
+
+      <symbol id="notifications" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.667 14.167h1.667v1.666H1.667v-1.666h1.667V8.333a6.667 6.667 0 0113.333 0v5.834zM7.5 17.5h5v1.667h-5V17.5z" fill="#000"></path>
+      </symbol>
+
+      <symbol id="package" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21.993 7.95a.96.96 0 00-.029-.214c-.007-.025-.021-.049-.03-.074-.021-.057-.04-.113-.07-.165-.016-.027-.038-.049-.057-.075-.032-.045-.063-.091-.102-.13-.023-.022-.053-.04-.078-.061-.039-.032-.075-.067-.12-.094-.004-.003-.009-.003-.014-.006l-.008-.006-8.979-4.99a1.002 1.002 0 00-.97-.001l-9.021 4.99c-.003.003-.006.007-.011.01l-.01.004c-.035.02-.061.049-.094.073-.036.027-.074.051-.106.082-.03.031-.053.067-.079.102-.027.035-.057.066-.079.104-.026.043-.04.092-.059.139-.014.033-.032.064-.041.1a.975.975 0 00-.029.21c-.001.017-.007.032-.007.05V16c0 .363.197.698.515.874l8.978 4.987.001.001.002.001.02.011c.043.024.09.037.135.054.032.013.063.03.097.039.166.043.34.043.506 0 .033-.009.064-.026.097-.039.045-.017.092-.029.135-.054l.02-.011.002-.001.001-.001 8.978-4.987c.316-.176.513-.511.513-.874V7.998c0-.017-.006-.031-.007-.048zm-10.021 3.922L5.058 8.005 7.82 6.477l6.834 3.905-2.682 1.49zm.048-7.719L18.941 8l-2.244 1.247-6.83-3.903 2.153-1.191zM13 19.301l.002-5.679L16 11.944V15l2-1v-3.175l2-1.119v5.705l-7 3.89z" fill="#FF6E6E"></path>
+      </symbol>
+
+      <symbol id="pieChart" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <g opacity="0.4">
+          <path d="M9.16667 1.70834V10.8333H18.2917C17.8742 15.0442 14.3208 18.3333 10 18.3333C5.3975 18.3333 1.66667 14.6025 1.66667 10C1.66667 5.67917 4.95583 2.12584 9.16667 1.70834V1.70834ZM10.8333 1.70834C12.7458 1.901 14.533 2.74869 15.8921 4.10787C17.2513 5.46704 18.099 7.25418 18.2917 9.16667H10.8333V1.70834Z"></path>
+        </g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.8921 4.10787C14.533 2.74869 12.7458 1.901 10.8333 1.70834V9.16667H18.2917C18.099 7.25418 17.2513 5.46704 15.8921 4.10787Z"></path>
+      </symbol>
+
+      <symbol id="piChartLight" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.893 4.108a8.336 8.336 0 00-5.06-2.4v7.459h7.459a8.336 8.336 0 00-2.4-5.06z" fill="#000"></path>
+        <path opacity=".4" fill-rule="evenodd" clip-rule="evenodd" d="M9.167 10.833V1.708a8.334 8.334 0 109.125 9.125H9.167z" fill="#000"></path>
+      </symbol>
+
+      <symbol id="printIcon" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19 7h-1V2H6v5H5a3 3 0 00-3 3v7a2 2 0 002 2h2v3h12v-3h2a2 2 0 002-2v-7a3 3 0 00-3-3zM8 4h8v3H8V4zm0 16v-4h8v4H8zm11-8h-4v-2h4v2z" fill="#EBEBEB"></path>
+      </symbol>
+
+      <symbol id="redTopDown" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.714 12.714a6.676 6.676 0 01-9.43 0 6.676 6.676 0 010-9.429 6.676 6.676 0 019.43 0 6.676 6.676 0 010 9.429zm-2.358-7.071L8.471 7.529 6.114 5.17l-.942.943L7.528 8.47l-1.885 1.886h4.713V5.643z" fill="#FF6E6E"></path>
+      </symbol>
+
+      <symbol id="searchIcon" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9.167 1.667c4.14 0 7.5 3.36 7.5 7.5 0 4.14-3.36 7.5-7.5 7.5-4.14 0-7.5-3.36-7.5-7.5 0-4.14 3.36-7.5 7.5-7.5zm0 13.333A5.832 5.832 0 0015 9.167a5.832 5.832 0 00-5.833-5.834 5.831 5.831 0 00-5.833 5.834A5.832 5.832 0 009.167 15zm7.07.06l2.358 2.356-1.179 1.179-2.357-2.357 1.179-1.179z" fill="#000"></path>
+      </symbol>
+
+      <symbol id="settingsIcon" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4.445 3.787a8.325 8.325 0 012.951-1.706 3.327 3.327 0 004.048.923c.45-.217.847-.532 1.159-.923a8.333 8.333 0 012.952 1.706 3.329 3.329 0 001.225 3.966c.413.282.884.467 1.379.542a8.369 8.369 0 010 3.408 3.33 3.33 0 00-2.824 3.044c-.038.499.037 1 .22 1.465a8.323 8.323 0 01-2.952 1.706A3.327 3.327 0 0010 16.666a3.328 3.328 0 00-2.604 1.251 8.325 8.325 0 01-2.951-1.706 3.328 3.328 0 00-1.226-3.965 3.326 3.326 0 00-1.379-.542 8.37 8.37 0 010-3.41 3.328 3.328 0 002.824-3.043 3.328 3.328 0 00-.22-1.464zm6.805 8.377a2.5 2.5 0 10-2.472-4.347 2.5 2.5 0 002.472 4.347z"></path>
+      </symbol>
+
+      <symbol id="settingsIconLight" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4.445 3.787a8.325 8.325 0 012.951-1.706 3.327 3.327 0 004.048.923c.45-.217.847-.532 1.159-.923a8.333 8.333 0 012.952 1.706 3.329 3.329 0 001.225 3.966c.413.282.884.467 1.379.542a8.369 8.369 0 010 3.408 3.33 3.33 0 00-2.824 3.044c-.038.499.037 1 .22 1.465a8.323 8.323 0 01-2.952 1.706A3.327 3.327 0 0010 16.666a3.328 3.328 0 00-2.604 1.251 8.325 8.325 0 01-2.951-1.706 3.328 3.328 0 00-1.226-3.965 3.326 3.326 0 00-1.379-.542 8.37 8.37 0 010-3.41 3.328 3.328 0 002.824-3.043 3.328 3.328 0 00-.22-1.464zm6.805 8.377a2.5 2.5 0 10-2.472-4.347 2.5 2.5 0 002.472 4.347z" fill="#000"></path>
+      </symbol>
+
+      <symbol id="shoppingCart" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+        <path opacity=".4" d="M3.333 5.345L.631 2.643 1.81 1.464l2.702 2.703h12.701a.833.833 0 01.799 1.072l-2 6.667a.834.834 0 01-.799.594H5v1.667h9.167v1.666h-10A.833.833 0 013.333 15V5.345zm1.25 13.822a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5zm10 0a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5z"></path>
+        <g opacity=".4">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M.63 2.643l2.703 2.702V15a.833.833 0 00.834.833h10v-1.666H5V12.5l-.488-8.333L1.81 1.464.63 2.644z"></path>
+          <path d="M4.512 4.167L5 12.5V4.167h-.488z"></path>
+        </g>
+      </symbol>
+
+      <symbol id="shoppingCartLight" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path opacity=".4" d="M3.333 5.345L.631 2.643 1.81 1.464l2.702 2.703h12.701a.833.833 0 01.799 1.072l-2 6.667a.834.834 0 01-.799.594H5v1.667h9.167v1.666h-10A.833.833 0 013.333 15V5.345zm1.25 13.822a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5zm10 0a1.25 1.25 0 110-2.5 1.25 1.25 0 010 2.5z" fill="#000"></path>
+        <g opacity=".4" fill="#000">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M.63 2.643l2.703 2.702V15a.833.833 0 00.834.833h10v-1.666H5V12.5l-.488-8.333L1.81 1.464.63 2.644z"></path>
+          <path d="M4.512 4.167L5 12.5V4.167h-.488z"></path>
+        </g>
+      </symbol>
+
+      <symbol id="smartphoneIcon" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4.666 2.667v10.666h6.667V2.667H4.666zM4 1.333h8a.667.667 0 01.666.667v12a.667.667 0 01-.666.667H4A.666.666 0 013.333 14V2A.667.667 0 014 1.333zm4 10a.667.667 0 110 1.334.667.667 0 010-1.334z" fill="#000"></path>
+      </symbol>
+
+      <symbol id="starGrey" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 14.167l-4.898 2.991 1.332-5.583-4.359-3.733 5.721-.459L10 2.083l2.204 5.3 5.722.459-4.36 3.733 1.332 5.583L10 14.167zm0-1.954l2.348 1.434-.639-2.675 2.09-1.79-2.742-.22L10 6.424l-1.056 2.54-2.742.22 2.089 1.789-.638 2.675L10 12.214z" fill="#B2B2B2"></path>
+      </symbol>
+
+      <symbol id="starOrange" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 14.167l-4.898 2.991 1.332-5.583-4.359-3.733 5.721-.459L10 2.083l2.204 5.3 5.722.459-4.36 3.733 1.332 5.583L10 14.167z" fill="#FFA800"></path>
+      </symbol>
+
+      <symbol id="storeMng" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+        <path opacity=".4" d="M17.5 16.667a.833.833 0 01-.833.833H3.333a.833.833 0 01-.833-.833V7.908a.833.833 0 01.322-.658l6.666-5.185a.833.833 0 011.024 0l6.666 5.185a.832.832 0 01.322.658v8.759z"></path>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.333 17.5H10V1.89a.833.833 0 00-.512.175L2.822 7.25a.833.833 0 00-.322.658v8.759a.833.833 0 00.833.833z"></path>
+      </symbol>
+
+      <symbol id="storeMngLight" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path opacity=".4" d="M17.5 16.667a.833.833 0 01-.833.833H3.333a.833.833 0 01-.833-.833V7.908a.833.833 0 01.322-.658l6.666-5.185a.833.833 0 011.024 0l6.666 5.185a.832.832 0 01.322.658v8.759z" fill="#000"></path>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.333 17.5H10V1.89a.833.833 0 00-.512.175L2.822 7.25a.833.833 0 00-.322.658v8.759a.833.833 0 00.833.833z" fill="#000"></path>
+      </symbol>
+
+      <symbol id="trashGrey" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5.00293 20C5.00293 21.103 5.89993 22 7.00293 22H17.0029C18.1059 22 19.0029 21.103 19.0029 20V8H21.0029V6H17.0029V4C17.0029 2.897 16.1059 2 15.0029 2H9.00293C7.89993 2 7.00293 2.897 7.00293 4V6H3.00293V8H5.00293V20ZM9.00293 4H15.0029V6H9.00293V4ZM8.00293 8H17.0029L17.0039 20H7.00293V8H8.00293Z" fill="#B2B2B2"></path>
+        <path d="M9.00293 10H11.0029V18H9.00293V10ZM13.0029 10H15.0029V18H13.0029V10Z" fill="#B2B2B2"></path>
+      </symbol>
+
+      <symbol id="trashIcon" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5.837 23.333a2.336 2.336 0 002.334 2.334h11.666a2.336 2.336 0 002.334-2.334v-14h2.333V7h-4.667V4.667a2.336 2.336 0 00-2.333-2.334h-7A2.336 2.336 0 008.17 4.667V7H3.504v2.333h2.333v14zm4.667-18.666h7V7h-7V4.667zM9.337 9.333h10.5l.001 14H8.171v-14h1.166z" fill="#000"></path>
+        <path d="M10.504 11.667h2.333V21h-2.333v-9.333zm4.667 0h2.333V21H15.17v-9.333z" fill="#000"></path>
+      </symbol>
+
+      <symbol id="triplePoint" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 2.25c-.825 0-1.5.675-1.5 1.5s.675 1.5 1.5 1.5 1.5-.675 1.5-1.5-.675-1.5-1.5-1.5zm0 10.5c-.825 0-1.5.675-1.5 1.5s.675 1.5 1.5 1.5 1.5-.675 1.5-1.5-.675-1.5-1.5-1.5zM9 7.5c-.825 0-1.5.675-1.5 1.5s.675 1.5 1.5 1.5 1.5-.675 1.5-1.5S9.825 7.5 9 7.5z"></path>
+      </symbol>
+
+      <symbol id="triplePointBlack" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 2.25c-.825 0-1.5.675-1.5 1.5s.675 1.5 1.5 1.5 1.5-.675 1.5-1.5-.675-1.5-1.5-1.5zm0 10.5c-.825 0-1.5.675-1.5 1.5s.675 1.5 1.5 1.5 1.5-.675 1.5-1.5-.675-1.5-1.5-1.5zM9 7.5c-.825 0-1.5.675-1.5 1.5s.675 1.5 1.5 1.5 1.5-.675 1.5-1.5S9.825 7.5 9 7.5z" fill="#000"></path>
+      </symbol>
+
+      <symbol id="triplePointLight" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 2.25c-.825 0-1.5.675-1.5 1.5s.675 1.5 1.5 1.5 1.5-.675 1.5-1.5-.675-1.5-1.5-1.5zm0 10.5c-.825 0-1.5.675-1.5 1.5s.675 1.5 1.5 1.5 1.5-.675 1.5-1.5-.675-1.5-1.5-1.5zM9 7.5c-.825 0-1.5.675-1.5 1.5s.675 1.5 1.5 1.5 1.5-.675 1.5-1.5S9.825 7.5 9 7.5z"></path>
+      </symbol>
+
+      <symbol id="uploadIcon" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.25 11.25h1.5v-4.5H12L9 3 6 6.75h2.25v4.5z" fill="#0A5DFF"></path>
+        <path d="M15 13.5H3V8.25H1.5v5.25c0 .827.673 1.5 1.5 1.5h12c.827 0 1.5-.673 1.5-1.5V8.25H15v5.25z" fill="#0A5DFF"></path>
+      </symbol>
+
+      <symbol id="user" width="14" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4.375 3.792A2.628 2.628 0 007 6.417a2.628 2.628 0 002.625-2.625A2.628 2.628 0 007 1.167a2.628 2.628 0 00-2.625 2.625zm7.292 8.458h.583v-.583a4.089 4.089 0 00-4.083-4.084H5.833a4.088 4.088 0 00-4.083 4.084v.583h9.917z" fill="#fff"></path>
+      </symbol>
+
+      <symbol id="userIcon" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5.625 4.875A3.38 3.38 0 009 8.25a3.38 3.38 0 003.375-3.375A3.38 3.38 0 009 1.5a3.38 3.38 0 00-3.375 3.375zM15 15.75h.75V15a5.257 5.257 0 00-5.25-5.25h-3A5.256 5.256 0 002.25 15v.75H15z" fill="#B2B2B2"></path>
+      </symbol>
+
+      <symbol id="warningIcon" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 14.667A6.667 6.667 0 118 1.334a6.667 6.667 0 010 13.333zM7.333 10v1.333h1.333V10H7.333zm0-5.333v4h1.333v-4H7.333z" fill="#fff"></path>
+      </symbol>
+
+      <symbol id="whiteCheck" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6.666 10.115l6.128-6.129.944.943L6.666 12 2.424 7.757l.942-.942 3.3 3.3z" fill="#fff"></path>
+      </symbol>
+
+      <symbol id="zipIcon" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.333 1.667v1.666H10V1.667h6.672c.457 0 .828.37.828.826v15.014a.833.833 0 01-.828.826H3.327a.828.828 0 01-.827-.826V2.493a.833.833 0 01.828-.826h5.005zM10 3.333V5h1.667V3.333H10zM8.333 5v1.667H10V5H8.333zM10 6.667v1.666h1.667V6.667H10zM8.333 8.333V10H10V8.333H8.333zM10 10v1.667H8.333v2.5h3.334V10H10z" fill="#fff"></path>
+      </symbol>
+
+      <symbol id="sidebarToggle" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.5 10.8325V16.6667C17.5 16.8877 17.421 17.0996 17.2803 17.2559C17.1397 17.4122 16.9489 17.5 16.75 17.5H10.75V10.8325H17.5ZM9.25 10.8325V17.5H3.25C3.05109 17.5 2.86032 17.4122 2.71967 17.2559C2.57902 17.0996 2.5 16.8877 2.5 16.6667V10.8325H9.25ZM9.25 2.5V9.16583H2.5V3.33333C2.5 3.11232 2.57902 2.90036 2.71967 2.74408C2.86032 2.5878 3.05109 2.5 3.25 2.5H9.25ZM16.75 2.5C16.9489 2.5 17.1397 2.5878 17.2803 2.74408C17.421 2.90036 17.5 3.11232 17.5 3.33333V9.16583H10.75V2.5H16.75Z" fill="black"></path>
+      </symbol>
+
+      <symbol id="bellIcon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.667 14.1666H18.3337V15.8333H1.66699V14.1666H3.33366V8.33329C3.33366 6.56518 4.03604 4.86949 5.28628 3.61925C6.53652 2.36901 8.23222 1.66663 10.0003 1.66663C11.7684 1.66663 13.4641 2.36901 14.7144 3.61925C15.9646 4.86949 16.667 6.56518 16.667 8.33329V14.1666ZM7.50033 17.5H12.5003V19.1666H7.50033V17.5Z" fill="black"></path>
+      </symbol>
+
+      <symbol id="themeIcon" width="18.16" height="18.16" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9.99993 9.82306C8.84656 8.66924 8.06108 7.19942 7.74276 5.59934C7.42444 3.99925 7.58756 2.34072 8.21152 0.833313C6.43251 1.18353 4.7984 2.05643 3.51818 3.3404C-0.0613997 6.91998 -0.0613997 12.7243 3.51818 16.3039C7.09868 19.8844 12.9021 19.8835 16.4826 16.3039C17.7662 15.0238 18.6391 13.3901 18.9897 11.6115C17.4823 12.2353 15.8238 12.3984 14.2237 12.0801C12.6236 11.7617 11.1538 10.9763 9.99993 9.82306Z"></path>
+      </symbol>
+
+      <symbol id="folderIcon" width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.25 11.25H9.75V6.75H12L9 3L6 6.75H8.25V11.25Z"></path>
+        <path d="M15 13.5H3V8.25H1.5V13.5C1.5 14.3273 2.17275 15 3 15H15C15.8273 15 16.5 14.3273 16.5 13.5V8.25H15V13.5Z"></path>
+      </symbol>
+    </defs>
+  </svg>
+</head>
+<!-- Body-->
+
+<body style="height:100%">
+<style>
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .form-group {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    .sidebar-wrapper {
+        z-index: 1000;
+        position: fixed;
+        left: 260px;
+        height: 100%;
+        margin-left: -260px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        background: #000000;
+        border: 1px solid #000000;
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+    }
+
+    .sidebar-wrapper .user {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .sidebar-wrapper .user__text {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .sidebar-wrapper .user__img {
+        width: 40px;
+        height: 40px;
+        background: #624ce0;
+        border-radius: 6px;
+        margin-right: 12px;
+        font-size: 15px;
+        font-style: normal;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        letter-spacing: -0.5px;
+        color: #ffffff;
+        padding: 11px 11px 10px 13px;
+    }
+
+    .sidebar-wrapper .user__title {
+        font-weight: 500;
+        font-size: 15px;
+        color: #ffffff;
+    }
+
+    .sidebar-wrapper .user__subtitle {
+        font-size: 13px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        letter-spacing: -0.5px;
+        color: #b2b2b2;
+    }
+
+    .sidebar-wrapper .sidebar-brand {
+        position: absolute;
+        top: 0;
+        width: 260px;
+        text-align: center;
+        padding: 20px 16px;
+    }
+
+    .sidebar-wrapper .sidebar-brand h2 {
+        font-family: "Inter", sans-serif;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 39px;
+        letter-spacing: -2px;
+        color: #000000;
+        margin: 0;
+        padding: 0;
+    }
+
+    .sidebar-wrapper .sidebar-heading {
+        top: 37px;
+        margin-top: 40px;
+        font-size: 12px;
+        text-transform: uppercase;
+        text-align: left;
+        color: #b2b2b2;
+    }
+
+    .sidebar-wrapper .sidebar-nav {
+        position: absolute;
+        top: 124px;
+        width: 228px;
+        margin: 0;
+        margin-left: 16px;
+        padding: 0;
+        list-style: none;
+    }
+
+    .sidebar-wrapper .sidebar-nav > li {
+        text-indent: 5px;
+        line-height: 40px;
+        margin-bottom: 5px;
+        -webkit-transition: width 0.2s ease;
+        transition: width 0.2s ease;
+    }
+
+    .sidebar-wrapper .sidebar-nav > li a {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: 500;
+        font-size: 15px;
+        font-style: normal;
+        line-height: 18.5px;
+        letter-spacing: -0.5px;
+        padding: 10px 0 10px 5.5px;
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+    }
+
+    .sidebar-wrapper .sidebar-nav > li > a:hover {
+        text-decoration: none;
+        color: #ffffff;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+    }
+
+    .sidebar-wrapper .sidebar-nav > li.active > a {
+        text-decoration: none;
+        color: #000000;
+        background: #ffffff;
+        border-radius: 4px;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+    }
+
+    .sidebar-wrapper .sidebar-nav > li.active > a .dashIcon {
+        fill: #000;
+    }
+
+    .sidebar-wrapper .sidebar-nav > li.active > a .shoppingWidget g {
+        fill: #000;
+    }
+
+    .sidebar-wrapper .sidebar-nav > li.active > a .accountWidget path {
+        fill: #000;
+    }
+
+    .sidebar-wrapper .menu-icon {
+        margin-right: 6px;
+        height: 20px;
+        width:30px;
+    }
+
+    .sidebar-wrapper .menu-icon .dashIcon {
+        fill: #fff;
+    }
+
+    .sidebar-wrapper .sidebar-nav > li > a > .dash-icon svg {
+        fill: #ffffff;
+    }
+
+    .sidebar-wrapper i.dash-icon svg path {
+        fill: #ffffff;
+    }
+
+    .sidebar-wrapper .up {
+        margin-left: 26px;
+        -webkit-transition: visibility 0.2s;
+        transition: visibility 0.2s;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .sidebar-wrapper .up svg {
+        -webkit-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+    }
+
+    .sidebar-wrapper ul.sidebar-submenu {
+        list-style-type: none;
+        margin-left: 28px;
+        -webkit-transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out;
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .sidebar-wrapper ul.sidebar-submenu li {
+        border-bottom: 1px solid rgba(235, 235, 235, 0.2);
+        padding-bottom: 8px;
+        margin-left: 10px;
+    }
+
+    .sidebar-wrapper ul.sidebar-submenu li:first-child {
+        border: none;
+        padding: 0;
+    }
+
+    .sidebar-wrapper ul.sidebar-submenu li:nth-of-type(2) {
+        border: none;
+        padding: 0;
+    }
+
+    .sidebar-wrapper ul.sidebar-submenu li a {
+        padding-left: 0;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: -0.5px;
+        color: #b2b2b2;
+        padding-top: 10px;
+    }
+
+    .sidebar-wrapper ul.sidebar-submenu > li.submenu-active > a {
+        color: #ffffff !important;
+    }
+
+    .sidebar-wrapper .sidebar-nav li:hover ul.sidebar-submenu {
+        background: transparent;
+        opacity: 1;
+        height: auto;
+    }
+
+    .sidebar-wrapper .sidebar-nav > li > a:hover .up svg {
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+        position: relative;
+        top: 5px;
+        right: -7px;
+    }
+
+    .sidebar-wrapper .sidebar-submenu a:hover {
+        color: #ffffff;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+    }
+
+    .sidebar-wrapper .sidebar-progress {
+        position: absolute;
+        bottom: 10%;
+        visibility: visible;
+        opacity: 1;
+        padding-left: 16px;
+        width: 92%;
+        margin-top: 170px;
+    }
+
+    .sidebar-wrapper .sidebar-progress_title {
+        font-size: 11px;
+        line-height: 13px;
+        letter-spacing: -0.5px;
+        color: #b2b2b2;
+    }
+
+    .sidebar-wrapper .sidebar-progress_subtitle {
+        margin-top: 4px;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: -0.5px;
+        color: #ffffff;
+    }
+
+    .sidebar-wrapper .sidebar-progress .progress {
+        margin-top: 8px;
+        height: 6px;
+        background: rgba(32, 201, 51, 0.2);
+        border-radius: 44px;
+    }
+
+    .sidebar-wrapper .sidebar-progress .progress .progress-bar {
+        background: #20c933 !important;
+        border-radius: 3px !important;
+    }
+
+    .sidebar-wrapper .sidebar-progress_button {
+        margin-top: 16px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 3px;
+        padding: 8px 0;
+        text-align: center;
+        height: 32px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        cursor: pointer;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sidebar-wrapper .sidebar-progress_button a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: -0.5px;
+    }
+
+    .sidebar-wrapper .sidebar-progress_button:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .sidebar-wrapper .sidebar-progress .active {
+        background: #ffffff;
+    }
+
+    .sidebar-wrapper .sidebar-progress .active a {
+        color: #000000;
+    }
+
+    .sidebar-wrapper .userProfile {
+        position: absolute;
+        padding-top: 12px;
+        bottom: 0;
+        margin-top: 18px;
+        margin-left: 16px;
+        margin-right: 16px;
+        width: 86%;
+    }
+
+    .sidebar-wrapper .userProfile ul li {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .sidebar-wrapper .userProfile ul li a {
+        display: block;
+        margin-left: auto;
+    }
+
+    .sidebar-wrapper .userAvatar span {
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid #000000;
+        border-radius: 3px;
+        padding: 6px 7px 6px;
+        width: 32px;
+        height: 32px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin-left: auto;
+        position: relative;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+    }
+
+    .sidebar-wrapper .userAvatar span .triplePoint {
+        fill: #fff;
+        transition: 0s;
+        -webkit-transition: 0s;
+        -moz-transition: 0s;
+        -ms-transition: 0s;
+        -o-transition: 0s;
+    }
+
+    .sidebar-wrapper .userAvatar span:hover {
+        background: #ffffff;
+    }
+
+    .sidebar-wrapper .userAvatar span:hover svg {
+        transition: fill 0s;
+        -webkit-transition: fill 0s;
+        -moz-transition: fill 0s;
+        -ms-transition: fill 0s;
+        -o-transition: fill 0s;
+        fill: #000000;
+    }
+
+    .sidebar-wrapper .userAvatar-image {
+        width: 40px;
+        height: 40px;
+        display: block;
+        background: rgba(255, 255, 255, 0);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+    }
+
+    .sidebar-wrapper .userAvatar-image img {
+        width: 100%;
+    }
+
+    .sidebar-wrapper .userInfo {
+        margin-left: 16px;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .sidebar-wrapper .userTitle {
+        display: block;
+        font-family: 'Inter';
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: -0.5px;
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        overflow-x: hidden;
+        color: #ffffff;
+    }
+
+    #wrapper.toggled .sidebar-wrapper {
+        width: 260px;
+    }
+
+    #wrapper.toggled .sidebar-wrapper .user > .user__text {
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    #wrapper.toggled .sidebar-wrapper .sidebar-nav > li > a > span {
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        display: none;
+    }
+
+    #wrapper.toggled .sidebar-wrapper .sidebar-nav > li.active > a {
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        width: 40px;
+    }
+
+    #wrapper.toggled .sidebar-wrapper .sidebar-nav > li a {
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        width: 40px;
+    }
+
+    #wrapper.toggled .sidebar-wrapper .sidebar-heading {
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: visibility 0.2s linear, opacity 0.2s linear;
+        transition: visibility 0.2s linear, opacity 0.2s linear;
+    }
+
+    #wrapper.toggled .sidebar-wrapper .sidebar-nav li:hover ul.sidebar-submenu {
+        height: 0;
+    }
+
+    #wrapper.toggled .sidebar-wrapper .up {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    #wrapper.toggled .sidebar-wrapper .sidebar-progress {
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: visibility 0.2s linear, opacity 0.2s linear;
+        transition: visibility 0.2s linear, opacity 0.2s linear;
+    }
+
+    #wrapper.toggled .sidebar-wrapper .userProfile ul li > a {
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        display: none;
+    }
+
+    hr.line {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 821px;
+        border: 1px solid rgba(178, 178, 178, 0.2);
+    }
+
+    #wrapper.toggled .sidebar-wrapper .userInfo {
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        display: none;
+    }
+
+    .sidebar-wrapper__white {
+        z-index: 1000;
+        position: fixed;
+        left: 260px;
+        width: 0;
+        height: 100%;
+        margin-left: -260px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        background: #ffffff;
+        border: 1px solid #ebebeb;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+
+    .sidebar-wrapper__white .user {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .sidebar-wrapper__white .user__text {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .sidebar-wrapper__white .user__img {
+        width: 40px;
+        height: 40px;
+        background: #624ce0;
+        border-radius: 6px;
+        margin-right: 12px;
+        font-size: 15px;
+        font-style: normal;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        letter-spacing: -0.5px;
+        color: #ffffff;
+        padding: 11px 11px 10px 13px;
+    }
+
+    .sidebar-wrapper__white .user__title {
+        font-weight: 500;
+        font-size: 15px;
+        color: #000000;
+    }
+
+    .sidebar-wrapper__white .user__subtitle {
+        font-size: 13px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        letter-spacing: -0.5px;
+        color: #b2b2b2;
+    }
+
+    .sidebar-wrapper__white .sidebar-brand {
+        position: absolute;
+        top: 0;
+        width: 260px;
+        text-align: center;
+        padding: 20px 16px;
+    }
+
+    .sidebar-wrapper__white .sidebar-brand h2 {
+        font-family: "Inter", sans-serif;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 39px;
+        letter-spacing: -2px;
+        color: #000000;
+        margin: 0;
+        padding: 0;
+    }
+
+    .sidebar-wrapper__white .sidebar-avatar {
+        display: block !important;
+    }
+
+    .sidebar-wrapper__white .sidebar-heading {
+        top: 37px;
+        margin-top: 40px;
+        font-size: 12px;
+        text-transform: uppercase;
+        text-align: left;
+        color: #b2b2b2;
+    }
+
+    .sidebar-wrapper__white .sidebar-nav {
+        position: absolute;
+        top: 124px;
+        width: 228px;
+        margin: 0;
+        margin-left: 16px;
+        padding: 0;
+        list-style: none;
+        -webkit-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+    }
+
+    .sidebar-wrapper__white .sidebar-nav > li {
+        text-indent: 5px;
+        line-height: 40px;
+        margin-bottom: 5px;
+        -webkit-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+    }
+
+    .sidebar-wrapper__white .sidebar-nav > li a {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-decoration: none;
+        color: #000000;
+        font-weight: 500;
+        font-size: 15px;
+        font-style: normal;
+        line-height: 18.5px;
+        letter-spacing: -0.5px;
+        padding: 10px 0 10px 5.5px;
+        -webkit-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+    }
+
+    .sidebar-wrapper__white .sidebar-nav > li > a:hover {
+        text-decoration: none;
+        color: #000000;
+        background-color: #ebebeb;
+        border-radius: 4px;
+    }
+
+    .sidebar-wrapper__white .sidebar-nav > li.active > a {
+        text-decoration: none;
+        color: #ffffff;
+        background: #000000;
+        border-radius: 4px;
+        -webkit-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+    }
+
+    .sidebar-wrapper__white .sidebar-nav > li.active > a .menu-icon svg {
+        fill: #fff;
+    }
+
+    .sidebar-wrapper__white .sidebar-nav > li.active > a .menu-icon svg path {
+        fill: #fff;
+    }
+
+    .sidebar-wrapper__white .menu-icon {
+        margin-right: 6px;
+        height: 20px;
+    }
+
+    .sidebar-wrapper__white .menu-icon svg {
+        fill: #000;
+    }
+
+    .sidebar-wrapper__white .menu-icon svg path {
+        fill: #000;
+    }
+
+    .sidebar-wrapper__white .up {
+        margin-left: 26px;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .sidebar-wrapper__white .up svg {
+        -webkit-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+    }
+
+    .sidebar-wrapper__white .sidebar-nav > li > a:hover .up svg {
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+        position: relative;
+        top: 5px;
+        right: -7px;
+    }
+
+    .sidebar-wrapper__white ul.sidebar-submenu {
+        list-style-type: none;
+        margin-left: 28px;
+        -webkit-transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out;
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .sidebar-wrapper__white ul.sidebar-submenu li {
+        border-bottom: 1px solid #ebebeb;
+        padding-bottom: 8px;
+        margin-left: 10px;
+    }
+
+    .sidebar-wrapper__white ul.sidebar-submenu li:first-child {
+        border: none;
+        padding: 0;
+    }
+
+    .sidebar-wrapper__white ul.sidebar-submenu li:nth-of-type(2) {
+        border: none;
+        padding: 0;
+    }
+
+    .sidebar-wrapper__white ul.sidebar-submenu li a {
+        padding-left: 0;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: -0.5px;
+        color: #b2b2b2;
+        padding-top: 10px;
+    }
+
+    .sidebar-wrapper__white .sidebar-nav li:hover ul.sidebar-submenu {
+        background: transparent;
+        opacity: 1;
+        height: auto;
+    }
+
+    .sidebar-wrapper__white .sidebar-submenu a:hover {
+        color: #000000;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+    }
+
+    .sidebar-wrapper__white .sidebar-progress {
+        position: absolute;
+        bottom: 10%;
+        visibility: visible;
+        opacity: 1;
+        padding-left: 16px;
+        width: 92%;
+        margin-top: 170px;
+    }
+
+    .sidebar-wrapper__white .sidebar-progress_title {
+        font-size: 11px;
+        line-height: 13px;
+        letter-spacing: -0.5px;
+        color: #b2b2b2;
+    }
+
+    .sidebar-wrapper__white .sidebar-progress_subtitle {
+        margin-top: 4px;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: -0.5px;
+        color: #000000;
+    }
+
+    .sidebar-wrapper__white .sidebar-progress .progress {
+        margin-top: 8px;
+        height: 6px;
+        background: rgba(32, 201, 51, 0.2);
+        border-radius: 44px;
+    }
+
+    .sidebar-wrapper__white .sidebar-progress .progress .progress-bar {
+        background: #20c933 !important;
+        border-radius: 3px !important;
+    }
+
+    .sidebar-wrapper__white .sidebar-progress_button {
+        margin-top: 16px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 3px;
+        padding: 8px 0;
+        text-align: center;
+        border: 1px solid #ebebeb;
+        -webkit-box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.02);
+        box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.02);
+        border-radius: 3px;
+        height: 32px;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+        cursor: pointer;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .sidebar-wrapper__white .sidebar-progress_button a {
+        color: #000000;
+        text-decoration: none;
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: -0.5px;
+    }
+
+    .sidebar-wrapper__white .sidebar-progress_button:hover {
+        background: #000000;
+    }
+
+    .sidebar-wrapper__white .sidebar-progress .active {
+        background: #000000;
+    }
+
+    .sidebar-wrapper__white .sidebar-progress .active a {
+        color: #ffffff;
+    }
+
+    .sidebar-wrapper__white .sidebar-progress_button:hover a {
+        -webkit-transition: 0.2s ease;
+        transition: 0.2s ease;
+        color: #ffffff;
+    }
+
+    .sidebar-wrapper__white .user__text {
+        visibility: visible;
+        opacity: 1;
+        -webkit-transition: visibility 0.2s linear, opacity 0.2s linear;
+        transition: visibility 0.2s linear, opacity 0.2s linear;
+    }
+
+    .sidebar-wrapper__white .userProfile {
+        position: absolute;
+        padding-top: 12px;
+        bottom: 0;
+        margin-top: 18px;
+        margin-left: 16px;
+        margin-right: 16px;
+        width: 86%;
+    }
+
+    .sidebar-wrapper__white .userProfile ul li {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .sidebar-wrapper__white .userProfile ul li a {
+        display: block;
+        margin-left: auto;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+    }
+
+    .sidebar-wrapper__white .userAvatar span {
+        background: #ffffff;
+        border: 1px solid #ebebeb;
+        border-radius: 3px;
+        padding: 6px 7px 6px;
+        width: 32px;
+        height: 32px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin-left: auto;
+        position: relative;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+    }
+
+    .sidebar-wrapper__white .userAvatar span .triplePoint {
+        fill: #000;
+    }
+
+    .sidebar-wrapper__white .userAvatar span:hover {
+        background: #000000;
+        border-radius: 3px;
+    }
+
+    .sidebar-wrapper__white .userAvatar span:hover .triplePoint {
+        fill: #fff;
+    }
+
+    .sidebar-wrapper__white .userAvatar-image {
+        width: 40px;
+        height: 40px;
+        display: block;
+        background: #ebebeb;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+    }
+
+    .sidebar-wrapper__white .userAvatar-image img {
+        width: 100%;
+    }
+
+    .sidebar-wrapper__white .userInfo {
+        margin-left: 16px;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .sidebar-wrapper__white .userTitle {
+        display: block;
+        font-family: 'Inter';
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: -0.5px;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+        overflow-x: hidden;
+        color: #000000;
+    }
+
+    .sidebar-wrapper__white ul.sidebar-submenu > li.submenu-active > a {
+        color: #000000;
+    }
+
+    .sidebar-wrapper__white ul.sidebar-submenu > li.submenu-active ~ ul.sidebar-submenu {
+        height: 50px;
+    }
+
+    #wrapper.toggled .sidebar-wrapper__white {
+        width: 260px;
+    }
+
+    #wrapper.toggled .sidebar-wrapper__white > .user > .user__text {
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    #wrapper.toggled .sidebar-wrapper__white > .sidebar-nav > li > a > span {
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        display: none;
+    }
+
+    #wrapper.toggled .sidebar-wrapper__white > .sidebar-nav > li.active > a {
+        -webkit-transition: width 0.5s linear;
+        transition: width 0.5s linear;
+        width: 40px;
+    }
+
+    #wrapper.toggled .sidebar-wrapper__white > .sidebar-nav > li a {
+        -webkit-transition: width 0.5s linear;
+        transition: width 0.5s linear;
+        width: 40px;
+    }
+
+    #wrapper.toggled .sidebar-wrapper__white > .sidebar-nav li .up {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    #wrapper.toggled .sidebar-wrapper__white > .sidebar-heading {
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: visibility 0.2s linear, opacity 0.2s linear;
+        transition: visibility 0.2s linear, opacity 0.2s linear;
+    }
+
+    #wrapper.toggled
+    .sidebar-wrapper__white
+    > .sidebar-nav
+    li:hover
+    ul.sidebar-submenu {
+        height: 0;
+    }
+
+    #wrapper.toggled .sidebar-wrapper__white > .sidebar-progress {
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: visibility 0.2s linear, opacity 0.2s linear;
+        transition: visibility 0.2s linear, opacity 0.2s linear;
+    }
+
+    #wrapper.toggled .sidebar-wrapper__white > .userProfile ul li > a {
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        display: none;
+    }
+
+    hr.line {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: auto;
+        bottom: 6% !important;
+        border: 1px solid rgba(178, 178, 178, 0.2);
+    }
+
+    #wrapper.toggled .sidebar-wrapper__white .userInfo {
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        display: none;
+    }
+
+</style>
+<header class="navbar navbar-expand-lg navbar-light fixed-top bg-light" style="height:5rem!important">
+    <div class="container-fluid navbar-inner">
+        <!-- navbar brand--><a class="navbar-brand" style="min-width: 100px;"
+                               href="{% static 'mstore/index.html' %}"><img width="100"
+                                                                            src="{% static 'mstore/img/logo-dark.png' %}"
+                                                                            alt="MStore"/></a>
+        <!-- navbar collapse area-->
+        <div class="collapse navbar-collapse" id="menu">
+        </div>
+        <!-- navbar buttons-->
+        <div class="navbar-btns">
+            <div class="navbar-btns-inner">
+                <a class="navbar-btn" href="#offcanvas-cart"
+                   data-toggle="offcanvas"><span class="d-block position-relative"><span
+                        class="navbar-btn-badge bg-primary text-light">4</span><i class="mx-auto mb-1"
+                                                                                  data-feather="shopping-cart"></i>$325.00</span></a>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Page Content-->
+<section class="glamour">
+    <div class="glamour__wrapper w-100">
+        <div class="step_small d-block d-sm-none">
+            <span>Step 3</span>
+            <p>Change</p>
+        </div>
+        <div class="content_glamour">
+            <div class="row no-gutters w-100 h-100">
+                <div class="col-xl-2 d-none d-md-flex" id="wrapper">
+
+                            <aside id="sidebar" class="sidebar-wrapper col-xl-2 col-1">
+                                <div class="sidebar-brand user">
+                                    <a href="#" id="side"><i class="user__img">M</i></a>
+                                    <div class="user__text">
+                                        <span class="user__title">motherboard team</span>
+                                        <span class="user__subtitle">10 employees</span>
+                                    </div>
+                                </div>
+
+                                <div class="sidebar-brand sidebar-heading">Marketing module</div>
+                                <ul class="sidebar-nav">
+                                    <li>
+                                        <a href="dashboard.html">
+                                            <i class="menu-icon menu-icon_1">
+                                            <svg class="dashIcon">
+                                                <use xlink:href="#dashboard"></use>
+                                            </svg>
+                                        </i> <span>Dashboard</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="payment-info.html"><i class="menu-icon menu-icon_2">
+                                            <svg class="dashIcon shoppingWidget">
+                                                <use xlink:href="#shoppingCart"></use>
+                                            </svg>
+                                        </i> <span>Orders</span></a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="account-info.html"><i class="menu-icon menu-icon_3">
+                                            <svg class="dashIcon accountWidget">
+                                                <use xlink:href="#accountUsers"></use>
+                                            </svg>
+                                        </i><span>Accounts &amp; Users</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="sales-stats.html"><i class="menu-icon menu-icon_4">
+                                            <svg class="dashIcon accountWidget">
+                                                <use xlink:href="#pieChart"></use>
+                                            </svg>
+                                        </i><span>Finance reports</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="profile-settings.html">
+                                            <i class="menu-icon menu-icon_6">
+                                                <svg class="dashIcon accountWidget">
+                                                    <use xlink:href="#settingsIcon"></use>
+                                                </svg>
+                                            </i><span>Settings</span></a>
+                                    </li>
+                                </ul>
+
+                                <div class="sidebar-progress">
+                                    <div class="sidebar-progress_title">Mails left</div>
+                                    <div class="sidebar-progress_subtitle">5 422 emails</div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 35%"
+                                             aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="sidebar-progress_button">
+                                        <a href="payment-info.html">Upgrade to Pro</a>
+                                    </div>
+                                </div>
+                                <hr class="line">
+                                <nav class="userProfile">
+                                    <ul>
+                                        <li class="userAvatar">
+                                            <div class="userAvatar-image">
+                                                <a href="#" data-toggle="modal" data-target="#userProfile"><img
+                                                        src="../img/borisJohnson.png" alt="User avatar"></a>
+                                            </div>
+                                            <div class="userInfo">
+                                                <div class="userTitle">Boris Johnson</div>
+                                            </div>
+                                            <a href="#" data-toggle="modal" data-target="#userProfile"><span><svg
+                                                    class="triplePoint">
+                  <use xlink:href="#triplePoint"></use>
+                </svg></span></a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </aside>
+
+                </div>
+                <div class="col-xl-8 col-md-7">
+                    <div class="glamour__body__content p-lg-5 p-1">
+                        <h4>Select the Quantities for this Order</h4>
+                        <div class="card__product">
+                            <div class="media">
+                                <div class="product__img">
+                                    <img src="{% static 'mstore/img/img__pro1.png' %}" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <div class="title--product">
+                                        <h3>Premium Comfort Shirt</h3>
+                                        <a href="#" class="action__pro">Remove</a>
+                                    </div>
+                                    <div class="select__size">
+                                        <div class="color__box" style="margin-top:0px;">
+                                            <h4>Select Your Colors</h4>
+                                            <div class="row">
+                                                <div class="col-3 col-lg-1 form-group">
+                                                    <label for="validationCustom01">S</label>
+                                                    <input class="form-control" type="number" value="" required>
+                                                </div>
+                                                <div class="col-3 col-lg-1 form-group">
+                                                    <label for="validationCustom01">M</label>
+                                                    <input class="form-control" type="number" value="" required>
+                                                </div>
+                                                <div class="col-3 col-lg-1 form-group">
+                                                    <label for="validationCustom01">L</label>
+                                                    <input class="form-control" type="number" value="" required>
+                                                </div>
+                                                <div class="col-3 col-lg-1 form-group">
+                                                    <label for="validationCustom01">XL</label>
+                                                    <input class="form-control" type="number" value="" required>
+                                                </div>
+                                                <div class="col-3 col-lg-1 form-group">
+                                                    <label for="validationCustom01">2XL
+                                                        <small>(+$2)</small>
+                                                    </label>
+                                                    <input class="form-control" type="number" value="" required>
+                                                </div>
+                                                <div class="col-3 col-lg-1 form-group">
+                                                    <label for="validationCustom01">3XL
+                                                        <small>(+$2)</small>
+                                                    </label>
+                                                    <input class="form-control" type="number" value="" required>
+                                                </div>
+                                                <div class="col-3 col-lg-1 form-group">
+                                                    <label for="validationCustom01">4XL
+                                                        <small>(+$2)</small>
+                                                    </label>
+                                                    <input class="form-control" type="number" value="" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="media">
+                                <div class="product__img">
+                                    <img src="{% static 'mstore/img/img__pro1.png' %}" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <div class="title--product">
+                                        <h3>Premium Comfort Shirt</h3>
+                                        <a href="#" class="action__pro">Remove</a>
+                                    </div>
+                                    <div class="select__size">
+                                        <div class="color__box" style="margin-top:0px;">
+                                            <h4>Select Your Colors</h4>
+                                            <div class="row">
+                                                <div class="col-3 col-lg-1 form-group">
+                                                    <label for="validationCustom01">S</label>
+                                                    <input class="form-control" type="number" value="" required>
+                                                </div>
+                                                <div class="col-3 col-lg-1 form-group">
+                                                    <label for="validationCustom01">M</label>
+                                                    <input class="form-control" type="number" value="" required>
+                                                </div>
+                                                <div class="col-3 col-lg-1 form-group">
+                                                    <label for="validationCustom01">L</label>
+                                                    <input class="form-control" type="number" value="" required>
+                                                </div>
+                                                <div class="col-3 col-lg-1 form-group">
+                                                    <label for="validationCustom01">XL</label>
+                                                    <input class="form-control" type="number" value="" required>
+                                                </div>
+                                                <div class="col-3 col-lg-1 form-group">
+                                                    <label for="validationCustom01">2XL
+                                                        <small>(+$2)</small>
+                                                    </label>
+                                                    <input class="form-control" type="number" value="" required>
+                                                </div>
+                                                <div class="col-3 col-lg-1 form-group">
+                                                    <label for="validationCustom01">3XL
+                                                        <small>(+$2)</small>
+                                                    </label>
+                                                    <input class="form-control" type="number" value="" required>
+                                                </div>
+                                                <div class="col-3 col-lg-1 form-group">
+                                                    <label for="validationCustom01">4XL
+                                                        <small>(+$2)</small>
+                                                    </label>
+                                                    <input class="form-control" type="number" value="" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <a href="#" class="btn btn-primary w-100 cta-pink mt-3">Proceed to Shipping</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Back To Top Button--><a class="scroll-to-top-btn" href="{% static 'mstore/#' %}"><i class="scroll-to-top-btn-icon"
+                                                                                         data-feather="chevron-up"></i></a>
+<!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
+<script src="{% static 'mstore/js/vendor.min.js' %}"></script>
+<script src="{% static 'mstore/js/theme.min.js' %}"></script>
+<script>
+    $(document).ready(function () {
+        $('.glamour_slide').owlCarousel({
+            loop: true,
+            margin: 10,
+            dots: false,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 2,
+                    nav: true,
+                    stagePadding: 20,
+                },
+
+                576: {
+                    items: 3,
+                    nav: true,
+                    stagePadding: 20,
+                },
+                768: {
+                    items: 2,
+                    nav: true,
+                    stagePadding: 20,
+                },
+                992: {
+                    items: 3,
+                    nav: true,
+                    stagePadding: 20,
+                },
+                1200: {
+                    items: 3,
+                    nav: true,
+                    loop: false,
+                    margin: 16,
+                    stagePadding: 20,
+                }
+            }
+        })
+    })
+</script>
+</body>
+
+</html>
