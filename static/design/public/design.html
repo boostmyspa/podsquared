@@ -1,13 +1,64 @@
-{% extends "builder/base.html" %}
-{% load static %}
-            {% block steps %}
-            <ul class="steps__count navbar-nav flex-grow-1" style="border-bottom:none;">
-                <li class="current"><a href="{% static 'mstore/glamour-design.html' %}">Design</a></li>
-                <li class=""><a href="{% static 'mstore/glamour-customize.html' %}">Select Products</a></li>
-                <li class=""><a href="{% static 'mstore/glamour-change.html' %}">Select Quantity</a></li>
-            </ul>
-            {% endblock %}
-      {% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Default Sidebar (Classic) - Sidebar Combinations | Front - Admin &amp; Dashboard Template</title>
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/theme.min.css">
+
+    <link rel="stylesheet" media="screen" href="css/glamour.css">
+
+    <link rel="stylesheet" media="screen" href="css/style.css">
+
+    <style>
+
+        .form-group {
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<header id="header" class="navbar navbar-expand-lg navbar-fixed navbar-height navbar-flush navbar-container navbar-bordered  ">
+    <div class="container">
+        <div class="js-mega-menu navbar-nav-wrap">
+            <div class="navbar-brand-wrapper">
+                <!-- Logo -->
+
+
+                <a class="navbar-brand" href="/dashboard" aria-label="Front">
+                    <img class="navbar-brand-logo" src="img/pod2.png" alt="Logo"/>
+                </a>
+
+                <!-- End Logo -->
+            </div>
+            <!-- End Secondary Content -->
+
+            <!-- Navbar -->
+            <div class="navbar-nav-wrap-content-left" id="navbarNavMenu">
+                <ul class="steps__count navbar-nav flex-grow-1" style="border-bottom:none;">
+                    <li class="visited"><a href="#">Design</a></li>
+                    <li class="visited"><a href="#">Customize</a></li>
+                    <li class="current"><a href="#">Change</a></li>
+                </ul>
+
+
+            </div>
+            <!-- End Navbar -->
+        </div>
+    </div>
+</header>
+
+
+<main id="content" role="main" class="main">
+
 <section class="glamour">
     <div class="glamour__wrapper w-100">
         <div class="step_small d-block d-md-none">
@@ -20,7 +71,7 @@
                     <div class="img__glamour position-relative">
                         <div id="app"></div>
 
-                        <img src="{% static 'mstore/img/img__shirt.png' %}" alt="" class="d-none img-fluid">
+                        <img src="img/mstore/img/img__shirt.png" alt="" class="d-none img-fluid">
                     </div>
                 </div>
                 <div class="col-xl-4 col-md-5">
@@ -28,7 +79,7 @@
                         <h3 class="title__glamour mt-3 p-2">First, Let's Start by Uploading Your Design</h3>
                         <div class="custom-file-boxed dz-clickable mt-3" style="border: .1rem dashed #464646;">
                   <div class="dz-message custom-file-boxed-label">
-                    <img class="avatar avatar-xl avatar-4by3 mb-3" src="{% static 'frontdash/svg/illustrations/browse.svg' %}" alt="Image Description">
+                    <img class="avatar avatar-xl avatar-4by3 mb-3" src="img/frontdash/svg/illustrations/browse.svg" alt="Image Description">
                     <h5 class="mb-1">Choose files to upload</h5>
                     <p class="mb-2">or</p>
                     <span class="btn btn-sm btn-primary">Browse files</span>
@@ -40,7 +91,7 @@
                             <div class="card__product">
                                 <div class="media">
                                     <div class="product__img">
-                                        <img src="{% static 'mstore/img/img__pro1.png' %}" alt="">
+                                        <img src="img/mstore/img/img__pro1.png" alt="">
                                     </div>
                                     <div class="media-body">
                                         <div class="title--product">
@@ -55,7 +106,7 @@
                                                         <div>
                                                             <input id="checkbox-0" class="checkbox-style" name="checkbox-1" type="checkbox">
                                                             <label for="checkbox-0" class="checkbox-style-3-label">
-                                                                <span class="clr-grey"><img src="{% static 'mstore/img/correct.svg'%}" alt=""></span>
+                                                                <span class="clr-grey"><img src="img/mstore/img/correct.svg" alt=""></span>
                                                             </label>
                                                         </div>
                                                     </li>
@@ -63,7 +114,7 @@
                                                         <div>
                                                             <input id="checkbox-1" class="checkbox-style" name="checkbox-1" type="checkbox">
                                                             <label for="checkbox-1" class="checkbox-style-3-label">
-                                                                <span class="clr-d-brown"><img src="{% static 'mstore/img/correct.svg'%}" alt=""></span>
+                                                                <span class="clr-d-brown"><img src="img/mstore/img/correct.svg" alt=""></span>
                                                             </label>
                                                         </div>
                                                     </li>
@@ -71,7 +122,7 @@
                                                         <div>
                                                             <input id="checkbox-2" class="checkbox-style" name="checkbox-1" type="checkbox">
                                                             <label for="checkbox-2" class="checkbox-style-3-label">
-                                                                <span class="clr-orange"><img src="{% static 'mstore/img/correct.svg'%}" alt=""></span>
+                                                                <span class="clr-orange"><img src="img/mstore/img/correct.svg" alt=""></span>
                                                             </label>
                                                         </div>
                                                     </li>
@@ -79,7 +130,7 @@
                                                         <div>
                                                             <input id="checkbox-3" class="checkbox-style" name="checkbox-1" type="checkbox">
                                                             <label for="checkbox-3" class="checkbox-style-3-label">
-                                                                <span class="clr-l-brown"><img src="{% static 'mstore/img/correct.svg'%}" alt=""></span>
+                                                                <span class="clr-l-brown"><img src="img/mstore/img/correct.svg" alt=""></span>
                                                             </label>
                                                         </div>
                                                     </li>
@@ -87,7 +138,7 @@
                                                         <div>
                                                             <input id="checkbox-4" class="checkbox-style" name="checkbox-1" type="checkbox">
                                                             <label for="checkbox-4" class="checkbox-style-3-label">
-                                                                <span class="clr-brown"><img src="{% static 'mstore/img/correct.svg'%}" alt=""></span>
+                                                                <span class="clr-brown"><img src="img/mstore/img/correct.svg" alt=""></span>
                                                             </label>
                                                         </div>
                                                     </li>
@@ -100,7 +151,7 @@
 
                             </div>
                             <div class="btn__holder">
-                                <a href="#" class="btn btn-outline-dark w-100"><img src="{% static 'mstore/img/more.svg' %}" alt=""> Add More Product</a>
+                                <a href="#" class="btn btn-outline-dark w-100"><img src="img/mstore/img/more.svg" alt=""> Add More Product</a>
                                 <a href="#" class="btn btn-primary w-100 cta-pink">Create an Order</a>
 
                                 <p class="note_deleivery">
@@ -114,7 +165,7 @@
                                 <div id="accordion">
                                     <div class="card__help">
                                         <div class="card__help__header" id="headingOne">
-                                            <a href="#"class="collapsed"  data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                            <a href="#" class="collapsed"  data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                                 <span><img src="img/tshirt__icon.svg" alt=""> Sizing Chart</span>
                                                 <img src="img/next.svg" alt="" class="next__a ml-auto">
                                             </a>
@@ -149,4 +200,93 @@
         </div>
     </div>
 </section>
-      {% endblock %}
+
+</main>
+
+<div class="modal fade" id="welcomeMessageModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <!-- Header -->
+            <div class="modal-close">
+                <button type="button" class="btn btn-icon btn-sm btn-ghost-secondary" data-dismiss="modal" aria-label="Close">
+                    <i class="tio-clear tio-lg"></i>
+                </button>
+            </div>
+            <!-- End Header -->
+
+            <!-- Body -->
+            <div class="modal-body p-sm-5">
+                <div class="text-center">
+                    <div class="w-75 w-sm-50 mx-auto mb-4">
+                        <img class="img-fluid" src="img/frontdash/svg/illustrations/graphs.svg" alt="Image Description">
+                    </div>
+
+                    <h4 class="h1">Welcome to Front</h4>
+
+                    <p>We're happy to see you in our community.</p>
+                </div>
+            </div>
+            <!-- End Body -->
+
+            <!-- Footer -->
+            <div class="modal-footer d-block text-center py-sm-5">
+                <small class="text-cap mb-4">Trusted by the world's best teams</small>
+
+                <div class="w-85 mx-auto">
+                    <div class="row justify-content-between">
+                        <div class="col">
+                            <img class="img-fluid ie-welcome-brands" src="img/frontdash/svg/brands/gitlab-gray.svg" alt="Image Description">
+                        </div>
+                        <div class="col">
+                            <img class="img-fluid ie-welcome-brands" src="img/frontdash/svg/brands/fitbit-gray.svg" alt="Image Description">
+                        </div>
+                        <div class="col">
+                            <img class="img-fluid ie-welcome-brands" src="img/frontdash/svg/brands/flow-xo-gray.svg" alt="Image Description">
+                        </div>
+                        <div class="col">
+                            <img class="img-fluid ie-welcome-brands" src="img/frontdash/svg/brands/layar-gray.svg" alt="Image Description">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Footer -->
+        </div>
+    </div>
+</div>
+
+<script src="js/frontdash/vendor/jquery/dist/jquery.min.js"></script>
+<script src="js/frontdash/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
+<script src="js/frontdash/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="js/frontdash/vendor/hs-navbar-vertical-aside/hs-navbar-vertical-aside.min.js"></script>
+<script src="js/frontdash/vendor/hs-unfold/dist/hs-unfold.min.js"></script>
+<script src="js/frontdash/vendor/hs-form-search/dist/hs-form-search.min.js"></script>
+
+<script src="js/frontdash/js/theme.min.js"></script>
+
+<script>
+    $(document).on('ready', function () {
+        // INITIALIZATION OF NAVBAR VERTICAL NAVIGATION
+        // =======================================================
+        var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
+
+
+        // INITIALIZATION OF UNFOLD
+        // =======================================================
+        $('.js-hs-unfold-invoker').each(function () {
+            var unfold = new HSUnfold($(this)).init();
+        });
+
+
+        // INITIALIZATION OF FORM SEARCH
+        // =======================================================
+        $('.js-form-search').each(function () {
+            new HSFormSearch($(this)).init()
+        });
+    });
+</script>
+
+</body>
+</html>
+

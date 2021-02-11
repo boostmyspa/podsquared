@@ -1,0 +1,20 @@
+
+.canvas-container {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+}
+
+.side-bar {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  max-width: 200px;
+  padding: 20px;
+}
+
+.design-image-pag {
+  position: fixed;
+  left: -5000px;
+}
