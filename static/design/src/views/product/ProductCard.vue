@@ -7,13 +7,13 @@
             <div class="media-body">
                 <div class="title--product">
                     <h3>{{ item.title }}</h3>
-                    <a @click.left.prevent="remove" href="#" class="action__pro">Remove</a>
+                    <a v-if="showRemoveButton" @click.left.prevent="remove" href="#" class="action__pro">Remove</a>
                 </div>
                 <div class="select__size">
                     <div class="color__box" style="margin-top:0px;">
                         <h4>Select Your Colors</h4>
                         <ul class="color__list">
-                            <color-item v-for="color in item.colors" :item="color" :key="color.color"></color-item>
+                            <color-item v-for="color in item.colors" :product="item" :item="color" :key="color.color"></color-item>
                         </ul>
                     </div>
                 </div>
@@ -37,12 +37,6 @@
             'item',
         ],
 
-        // data () {
-        //     return {
-        //         publicPath: process.env.BASE_URL
-        //     }
-        // },
-
         methods: {
             ...mapActions('products', [
                 'removeProduct',
@@ -50,13 +44,17 @@
 
             remove () {
                 this.removeProduct(this.item);
-            }
+            },
         },
 
         computed: {
             ...mapState('products', [
-                'colorsList',
+                'selectedProducts',
             ]),
+
+            showRemoveButton () {
+                return this.selectedProducts.length > 1;
+            }
         },
     }
 </script>

@@ -176,6 +176,8 @@
 
         data: () => {
             return {
+                publicPath: process.env.BASE_URL,
+
                 stageConfig: {
                     width: 500,
                     height: 500,
@@ -516,7 +518,7 @@
                     // transformer rotater icon
                     this.transformerRotaterImage = image;
                 },
-                'img/icons/rotate.png'
+                `${this.publicPath}img/icons/rotate.png`
             );
         }
     }

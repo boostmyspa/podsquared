@@ -24,6 +24,17 @@
             }
         },
 
+        methods: {
+            LoadBackgroundImage () {
+                LoadImage(
+                    (image) => {
+                        this.backgroundImage = image;
+                    },
+                    this.backgroundImageSrc
+                );
+            },
+        },
+
         computed: {
             ...mapState({
                 backgroundImageData: 'backgroundImage',
@@ -66,25 +77,13 @@
 
         watch: {
             backgroundImageSrc () {
-                LoadImage(
-                    (image) => {
-                        this.backgroundImage = image;
-                    },
-                    this.backgroundImageData.src
-                );
+                this.LoadBackgroundImage();
             },
         },
 
         beforeMount () {
-            const backgroundImageSrc = this.backgroundImageData.src;
-
-            if (backgroundImageSrc) {
-                LoadImage(
-                    (image) => {
-                        this.backgroundImage = image;
-                    },
-                    backgroundImageSrc
-                );
+            if (this.backgroundImageSrc) {
+                this.LoadBackgroundImage();
             }
         },
     }

@@ -15,7 +15,7 @@ export default new Vuex.Store({
         designImage: {
             imageOrigin: null,
             image: null,
-            src: '', // '/img/design/Baby-Yoda-PNG-File.png'
+            src: '',
             x: 0,
             y: 0,
             width: 0,
@@ -34,7 +34,7 @@ export default new Vuex.Store({
 
         backgroundImage: {
             id: 1,
-            src: '/img/t-shirt/Gildan64000_WhiteBackground_HeatherBronze.jpg',
+            src: null,
         },
 
         printArea: {
@@ -132,9 +132,9 @@ export default new Vuex.Store({
             commit('setDesignImageRotation', rotation);
         },
 
-        setBackgroundImage ({ commit }, image) {
-            const id = image.id;
-            const src = image.src;
+        setBackgroundImage ({ commit }, imageItem) {
+            const id = imageItem.id;
+            const src = imageItem.src;
 
             commit('setBackgroundImageId', id);
             commit('setBackgroundImageSrc', src);

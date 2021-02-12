@@ -127,10 +127,6 @@
                 'flipDesignImageVertical',
             ]),
 
-            ...mapActions('products', [
-                'setFirstProduct',
-            ]),
-
             openProductModal () {
                 this.showProductModal = true;
             },
@@ -155,9 +151,7 @@
             ]),
         },
 
-        beforeMount () {
-            this.setFirstProduct();
-        }
+
     }
 </script>
 

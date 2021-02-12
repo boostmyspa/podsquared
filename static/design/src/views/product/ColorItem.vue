@@ -15,6 +15,7 @@
         name: "ColorItem",
 
         props: [
+            'product',
             'item',
         ],
 
@@ -24,7 +25,7 @@
             ]),
 
             selectColor () {
-                this.toggleProductColor(this.item);
+                this.toggleProductColor({ colorItem: this.item, product: this.product });
             }
         },
 

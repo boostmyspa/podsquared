@@ -22,13 +22,13 @@ export default {
                     {
                         title: 'd-brown',
                         color: '#956743',
-                        src: publicPath + 'img/t-shirt/Gildan64000_WhiteBackground_HeatherBronze.jpg',
+                        src: publicPath + 'img/mockups/img1.png',
                         selected: false,
                     },
                     {
                         title: 'orange',
                         color: '#FABB98',
-                        src: publicPath + 'img/t-shirt/Gildan64000_WhiteBackground_HeatherBerry.jpg',
+                        src: publicPath + 'img/mockups/img5.png',
                         selected: false,
                     },
                 ],
@@ -43,19 +43,19 @@ export default {
                     {
                         title: 'gray',
                         color: '#BCBBC1',
-                        src: publicPath + 'img/t-shirt/Gildan64000_WhiteBackground_HeatherBerry.jpg',
+                        src: publicPath + 'img/t-shirt/Gildan64000_WhiteBackground_HeatherBronze.jpg',
                         selected: false,
                     },
                     {
                         title: 'l-brown',
                         color: '#E9D8C4',
-                        src: publicPath + 'img/t-shirt/Gildan64000_WhiteBackground_HeatherBronze.jpg',
+                        src: publicPath + 'img/mockups/img6.png',
                         selected: false,
                     },
                     {
                         title: 'brown',
                         color: '#CBA876',
-                        src: publicPath + 'img/t-shirt/Gildan64000_WhiteBackground_HeatherBerry.jpg',
+                        src: publicPath + 'img/mockups/img10.png',
                         selected: false,
                     },
                 ],
@@ -97,25 +97,46 @@ export default {
             commit('setProductSelect', { product, selected: true });
         },
 
-        removeProduct ({ getters, commit }, product) {
+        removeProduct ({ getters, commit, dispatch }, product) {
             const index = getters.getSelectedProductIndexById(product.id);
 
             commit('remove', index);
             commit('setProductSelect', { product, selected: false });
 
             product.colors.forEach((colorItem) => {
-                commit('setProductColor', { colorItem, selected: false })
+                dispatch('setProductColor', { product, colorItem, selected: false });
             });
         },
 
         setFirstProduct ({ state, dispatch }) {
-            dispatch('addProduct', state.products[0]);
+            const firstProduct = state.products[0];
+
+            dispatch('addProduct', firstProduct);
+            dispatch('toggleProductColor', { colorItem: firstProduct.colors[0], product: firstProduct });
         },
 
-        toggleProductColor ({ commit }, colorItem) {
+        setProductColor ({ commit, dispatch }, { product, colorItem, selected }) {
+            commit('setProductColor', { colorItem, selected });
+
+            let imageItem = {};
+
+            // set product as canvas background
+            if (selected) {
+                imageItem.src = colorItem.src;
+            }
+            else {
+                imageItem.src = product.src;
+            }
+
+            imageItem.id = product.id;
+
+            dispatch('setBackgroundImage', imageItem, { root: true });
+        },
+
+        toggleProductColor ({ dispatch }, { colorItem, product }) {
             const selected = !colorItem.selected;
 
-            commit('setProductColor', { colorItem, selected });
+            dispatch('setProductColor', { product, colorItem, selected });
         },
     }
 }
