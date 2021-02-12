@@ -4,10 +4,21 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100%;
+  //height: 100%;
 
   &.hovered {
-    background: #eee;
+
+    .custom-file-boxed {
+      background: #eee;
+    }
+  }
+
+  .custom-file-boxed {
+    border: 0.1rem dashed #464646;
+  }
+
+  [type="file"] {
+    display: none;
   }
 }
 

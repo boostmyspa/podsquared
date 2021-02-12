@@ -1,6 +1,10 @@
 <template>
     <div class="">
-        <div class="side-bar">
+        <glamour-container></glamour-container>
+
+
+
+        <!--<div class="side-bar">
             <p>
                 <upload-image
                         @uploadedImage="uploadedDesignImage"
@@ -37,55 +41,57 @@
                 <br>
                 rotation: {{ designImage.rotation }}
             </p>
-        </div>
+        </div>-->
 
-        <div class="canvas-container">
+        <!--<div class="canvas-container">
             <canvas-main></canvas-main>
             <canvas-design-image-pad></canvas-design-image-pad>
-        </div>
+        </div>-->
 
-        <products-list></products-list>
+        <!--<products-list></products-list>-->
     </div>
 </template>
 
 <script>
-    import { mapState, mapActions } from 'vuex';
-    import UploadImage from './uploader/UploadImage';
-    import ProductsList from './product/ProductsList';
-    import CanvasMain from './canvas/CanvasMain';
-    import DesignImagePad from './canvas/DesignImagePad';
+    // import { mapState, mapActions } from 'vuex';
+    // import UploadImage from './uploader/UploadImage';
+    // import ProductsList from './product/ProductsList';
+    // import CanvasMain from './canvas/CanvasMain';
+    // import DesignImagePad from './canvas/DesignImagePad';
+    import GlamourContainer from './glamour/GlamourContainer';
 
     export default {
         name: "App",
 
         components: {
-            'upload-image': UploadImage,
-            'products-list': ProductsList,
-            'canvas-main': CanvasMain,
-            'canvas-design-image-pad': DesignImagePad,
+            // 'upload-image': UploadImage,
+            // 'products-list': ProductsList,
+            // 'canvas-main': CanvasMain,
+            // 'canvas-design-image-pad': DesignImagePad,
+            'glamour-container': GlamourContainer,
         },
 
         methods: {
-            ...mapActions([
-                'setDesignImageOrigin',
-                'flipDesignImageHorizontal',
-                'flipDesignImageVertical',
-            ]),
-
-            getDesignImageData () {
-                console.log(this.designImage);
-            },
-
-            uploadedDesignImage (image) {
-                this.setDesignImageOrigin(image);
-            }
+            // ...mapActions([
+            //     'setDesignImageOrigin',
+            //     'flipDesignImageHorizontal',
+            //     'flipDesignImageVertical',
+            // ]),
+            //
+            // getDesignImageData () {
+            //     console.log(this.designImage);
+            // },
+            //
+            // uploadedDesignImage (image) {
+            //     this.setDesignImageOrigin(image);
+            // }
         },
 
         computed: {
-            ...mapState([
-                'designImage',
-                'designImageSizeWarning',
-            ]),
+            // ...mapState([
+            //     'designImage',
+            //     'designImageSizeWarning',
+            // ]),
         }
     }
 </script>

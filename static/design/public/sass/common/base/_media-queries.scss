@@ -1,0 +1,33 @@
+
+//-- media queries breakpoints
+
+//$breakpoint-xs: 576px; // 375
+$breakpoint-sm: 768px; // 800
+$breakpoint-md: 992px; // 1120
+$breakpoint-lg: 1200px; // 1440
+$breakpoint-lgx: 1440px;
+
+//-- !media queries breakpoints
+
+
+//-- media queries
+
+@function media-breakpoint-max($media-breakpoint) {
+  @return $media-breakpoint - 0.02
+}
+
+$max-sm: "(max-width: "media-breakpoint-max($breakpoint-sm)")";
+$max-md: "(max-width: "media-breakpoint-max($breakpoint-md)")";
+$max-lg: "(max-width: "media-breakpoint-max($breakpoint-lg)")";
+$max-lgx: "(max-width: "media-breakpoint-max($breakpoint-lgx)")";
+
+$min-sm: "screen and (min-width: "$breakpoint-sm")";
+$min-md: "screen and (min-width: "$breakpoint-md")";
+$min-lg: "screen and (min-width: "$breakpoint-lg")";
+$min-lgx: "screen and (min-width: "$breakpoint-lgx")";
+
+$only-sm: "(min-width: "$breakpoint-sm") and (max-width: "media-breakpoint-max($breakpoint-md)")";
+$only-md: "(min-width: "$breakpoint-md") and (max-width: "media-breakpoint-max($breakpoint-lg)")";
+$only-lg: "(min-width: "$breakpoint-lg") and (max-width: "media-breakpoint-max($breakpoint-lgx)")";
+
+//-- !media queries

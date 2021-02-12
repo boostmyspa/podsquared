@@ -3,7 +3,9 @@
 
 module.exports = {
 
-    publicPath: '',
+    publicPath: process.env.NODE_ENV === 'production'
+        ? '/static/design/'
+        : '',
 
     // отключение хэшей в именах файлов
     filenameHashing: false,

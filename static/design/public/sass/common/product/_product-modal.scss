@@ -1,0 +1,48 @@
+
+.product-modal {
+  display: flex;
+  position: fixed;
+  z-index: $z-index--product-modal;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $color-white;
+
+  &--btn-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  &--btn-save {
+    flex: 0 1 auto;
+    margin: auto auto 0;
+  }
+
+  &-catalog {
+    flex: 0 1 auto;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+
+    &--products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &-selected {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 auto;
+    overflow: auto;
+    width: 400px;
+    height: 100%;
+    padding: 50px 20px 15px;
+    background: $color-gray;
+  }
+}
