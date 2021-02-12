@@ -4,7 +4,7 @@
 module.exports = {
 
     publicPath: process.env.NODE_ENV === 'production'
-        ? '/static/design/'
+        ? '/static/design/dist/'
         : '',
 
     // отключение хэшей в именах файлов
