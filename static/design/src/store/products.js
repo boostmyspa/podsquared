@@ -61,6 +61,21 @@ export default {
                 ],
                 selected: false,
             },
+            {
+                id: 3,
+                title: 'T-Shirt Gildan HeatherBronze',
+                src: publicPath + 'img/mockups/img5.png',
+                description: 'T-Shirt Description text goes here',
+                colors: [
+                    {
+                        title: 'orange',
+                        color: '#FABB98',
+                        src: publicPath + 'img/mockups/img5.png',
+                        selected: false,
+                    },
+                ],
+                selected: false,
+            },
         ],
 
         selectedProducts: [],

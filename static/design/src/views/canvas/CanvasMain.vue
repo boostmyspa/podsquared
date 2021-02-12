@@ -248,6 +248,7 @@
                 this.designImageConfigNormal.y = y;
 
                 this.isDragTransform = false;
+                this.showHelpLineCenterX = false;
             },
 
             designImageTransformStart () {
