@@ -19,10 +19,9 @@
                                 y: designImageConfig.y,
                                 width: designImageConfig.width,
                                 height: designImageConfig.height,
-                                image: designImageData.image,
                                 scaleX: designImageScaleX,
                                 scaleY: designImageScaleY,
-                                rotation: designImageRotation,
+                                rotation: designImageConfig.rotation,
                                 draggable: true,
                                 dragBoundFunc: designImageDragBoundFunc,
                             }"
@@ -194,13 +193,13 @@
 
                 designImageScaleX: 1,
                 designImageScaleY: 1,
-                designImageRotation: 0,
 
                 designImageConfigNormal: {
                     x: 0,
                     y: 0,
                     width: 0,
                     height: 0,
+                    rotation: 0,
                 },
 
                 designImageConfigDragTransform: {
@@ -208,6 +207,7 @@
                     y: 0,
                     width: 0,
                     height: 0,
+                    rotation: 0,
                 },
 
                 // states
@@ -266,9 +266,7 @@
                 const height = target.height() * scale;
                 const rotation = target.rotation();
 
-                this.designImageScaleX = scale;
-                this.designImageScaleY = scale;
-                this.designImageRotation = rotation;
+                this.setTransformerScale(scale);
 
                 this.setDesignImagePosition({ x, y });
                 this.setDesignImageSize({ width, height });
@@ -282,12 +280,14 @@
                 const y = target.y();
                 const width = target.width();
                 const height = target.height();
+                const rotation = target.rotation();
 
                 this.designImageConfigNormal = {
                     x: x,
                     y: y,
                     width: width,
                     height: height,
+                    rotation: rotation,
                 };
 
                 this.isDragTransform = false;
@@ -341,6 +341,11 @@
                 transformerNode.getLayer().batchDraw();
             },
 
+            setTransformerScale (scale) {
+                this.designImageScaleX = scale;
+                this.designImageScaleY = scale;
+            },
+
             updateTransformerRotater () {
                 const self = this;
                 const transformer = this.$refs.transformer.getNode();
@@ -368,6 +373,26 @@
             designImageUpdate () {
                 const image = this.designImageData.image;
 
+                if (!image) return {
+                    x: 0,
+                    y: 0,
+                    width: 0,
+                    height: 0,
+                    rotation: 0,
+                };
+
+                // check if image was created before
+                if (this.designImageData.width) {
+                    return {
+                        x: this.designImageData.x,
+                        y: this.designImageData.y,
+                        width: this.designImageData.width,
+                        height: this.designImageData.height,
+                        rotation: this.designImageData.rotation,
+                    }
+                }
+
+                // if it's new image
                 const
                     box = this.designCropConfig,
                     boxHeight = box.height,
@@ -392,6 +417,7 @@
                     y: y,
                     width: width,
                     height: height,
+                    rotation: rotation,
                 }
             },
 
@@ -483,13 +509,9 @@
                 this.updateTransformer();
 
                 // reset transformer changes
-                this.designImageScaleX = 1;
-                this.designImageScaleY = 1;
-                this.designImageRotation = 0;
+                this.setTransformerScale(1);
 
                 this.designImageConfigNormal = this.designImageUpdate();
-
-                this.resetDesignImageFlip();
             }
         },
 

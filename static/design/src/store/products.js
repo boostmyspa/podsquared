@@ -16,19 +16,22 @@ export default {
                     {
                         title: 'brown',
                         color: '#CBA876',
-                        src: publicPath + 'img/t-shirt/Gildan64000_WhiteBackground_HeatherBerry.jpg',
+                        srcFront: publicPath + 'img/t-shirt/Gildan64000_WhiteBackground_HeatherBerry.jpg',
+                        srcBack: publicPath + 'img/t-shirt/Gildan64000_WhiteBackground_HeatherBerry_Back.jpg',
                         selected: false,
                     },
                     {
                         title: 'd-brown',
                         color: '#956743',
-                        src: publicPath + 'img/mockups/img1.png',
+                        srcFront: publicPath + 'img/mockups/img1.png',
+                        srcBack: publicPath + 'img/mockups/img1_Back.png',
                         selected: false,
                     },
                     {
                         title: 'orange',
                         color: '#FABB98',
-                        src: publicPath + 'img/mockups/img5.png',
+                        srcFront: publicPath + 'img/mockups/img5.png',
+                        srcBack: publicPath + 'img/mockups/img5.png',
                         selected: false,
                     },
                 ],
@@ -43,19 +46,22 @@ export default {
                     {
                         title: 'gray',
                         color: '#BCBBC1',
-                        src: publicPath + 'img/t-shirt/Gildan64000_WhiteBackground_HeatherBronze.jpg',
+                        srcFront: publicPath + 'img/t-shirt/Gildan64000_WhiteBackground_HeatherBronze.jpg',
+                        srcBack: publicPath + 'img/t-shirt/Gildan64000_WhiteBackground_HeatherBronze_Back.jpg',
                         selected: false,
                     },
                     {
                         title: 'l-brown',
                         color: '#E9D8C4',
-                        src: publicPath + 'img/mockups/img6.png',
+                        srcFront: publicPath + 'img/mockups/img6.png',
+                        srcBack: publicPath + 'img/mockups/img6.png',
                         selected: false,
                     },
                     {
                         title: 'brown',
                         color: '#CBA876',
-                        src: publicPath + 'img/mockups/img10.png',
+                        srcFront: publicPath + 'img/mockups/img10.png',
+                        srcBack: publicPath + 'img/mockups/img10.png',
                         selected: false,
                     },
                 ],
@@ -70,7 +76,8 @@ export default {
                     {
                         title: 'orange',
                         color: '#FABB98',
-                        src: publicPath + 'img/mockups/img5.png',
+                        srcFront: publicPath + 'img/mockups/img5.png',
+                        srcBack: publicPath + 'img/mockups/img5.png',
                         selected: false,
                     },
                 ],
@@ -133,19 +140,12 @@ export default {
         setProductColor ({ commit, dispatch }, { product, colorItem, selected }) {
             commit('setProductColor', { colorItem, selected });
 
-            let imageItem = {};
+            const productId = product.id;
 
-            // set product as canvas background
-            if (selected) {
-                imageItem.src = colorItem.src;
-            }
-            else {
-                imageItem.src = product.src;
-            }
+            // take image from selected color or from the first of the product colors
+            const imageItem = selected ? colorItem : product.colors[0];
 
-            imageItem.id = product.id;
-
-            dispatch('setBackgroundImage', imageItem, { root: true });
+            dispatch('setBackgroundImage', { imageItem, productId }, { root: true });
         },
 
         toggleProductColor ({ dispatch }, { colorItem, product }) {

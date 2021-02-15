@@ -25,17 +25,47 @@ export default new Vuex.Store({
             scaleY: 1,
         },
 
-        designImagePadSize: {
-            width: 500,
-            height: 500,
+        designImageFront: {
+            imageOrigin: null,
+            image: null,
+            src: '',
+            x: 0,
+            y: 0,
+            width: 0,
+            height: 0,
+            rotation: 0,
+            scaleX: 1,
+            scaleY: 1,
         },
 
+        designImageBack: {
+            imageOrigin: null,
+            image: null,
+            src: '',
+            x: 0,
+            y: 0,
+            width: 0,
+            height: 0,
+            rotation: 0,
+            scaleX: 1,
+            scaleY: 1,
+        },
+
+        designImagePadSize: {
+            width: 1000,
+            height: 1000,
+        },
+
+        showProductFront: true, // Front/Back switch
         designImageSizeWarning: '', // good: ''; bed: 'medium'; veryBad: 'small'
 
         backgroundImage: {
             id: 1,
             src: null,
         },
+
+        backgroundImageFrontSrc: null,
+        backgroundImageBackSrc: null,
 
         printArea: {
             width: 14 * 300, // 14" * 300dpi
@@ -107,13 +137,102 @@ export default new Vuex.Store({
 
         setDesignImageSizeWarning (state, warning) {
             state.designImageSizeWarning = warning
-        }
+        },
+
+        toggleProductSide (state) {
+            state.showProductFront = !state.showProductFront;
+        },
+
+        setDesignImageAsFront (state) {
+            state.designImage = Object.assign({}, state.designImageFront);
+        },
+
+        setDesignImageAsBack (state) {
+            state.designImage = Object.assign({}, state.designImageBack);
+        },
+
+        setDesignImageFrontAsCurrent (state) {
+            state.designImageFront = Object.assign({}, state.designImage);
+        },
+
+        setDesignImageBackAsCurrent (state) {
+            state.designImageBack = Object.assign({}, state.designImage);
+        },
+
+        setBackgroundImageFrontSrc (state, src) {
+            state.backgroundImageFrontSrc = src;
+        },
+
+        setBackgroundImageBackSrc (state, src) {
+            state.backgroundImageBackSrc = src;
+        },
+
+        setBackgroundImageFrontAsCurrent (state) {
+            state.backgroundImage.src = state.backgroundImageFrontSrc;
+        },
+
+        setBackgroundImageBackAsCurrent (state) {
+            state.backgroundImage.src = state.backgroundImageBackSrc;
+        },
     },
 
     actions: {
+        // on select/unSelect product color - set the background image Front/Back sources
+        setBackgroundImage ({ commit, dispatch }, { imageItem, productId }) {
+            commit('setBackgroundImageId', productId);
+
+            const srcFront = imageItem.srcFront;
+            const srcBack = imageItem.srcBack;
+
+            commit('setBackgroundImageFrontSrc', srcFront);
+            commit('setBackgroundImageBackSrc', srcBack);
+
+            dispatch('setBackgroundImageCurrent');
+        },
+
+        // on toggle Front/Back - set the Background (product) image
+        setBackgroundImageCurrent ({ state, commit }) {
+            const isFront = state.showProductFront;
+
+            if (isFront) {
+                commit('setBackgroundImageFrontAsCurrent');
+            }
+            else {
+                commit('setBackgroundImageBackAsCurrent');
+            }
+        },
+
+        // on toggle Front/Back - set the Design image
+        setDesignImageCurrent ({ state, commit }) {
+            const isFront = state.showProductFront;
+
+            if (isFront) {
+                commit('setDesignImageBackAsCurrent');
+                commit('setDesignImageAsFront');
+            }
+            else {
+                commit('setDesignImageFrontAsCurrent');
+                commit('setDesignImageAsBack');
+            }
+        },
+
         setDesignImageOrigin ({ commit, dispatch }, image) {
             commit('setDesignImageOrigin', image);
             dispatch('setDesignImageSizeWarning', image);
+
+            // reset image properties
+            commit('setDesignImagePosition', {
+                x: 0,
+                y: 0,
+            });
+
+            commit('setDesignImageSize', {
+                width: 0,
+                height: 0,
+            });
+
+            commit('setDesignImageRotation', 0);
+            dispatch('resetDesignImageFlip');
         },
 
         setDesignImage ({ commit }, image) {
@@ -130,14 +249,6 @@ export default new Vuex.Store({
 
         setDesignImageRotation ({ commit }, rotation) {
             commit('setDesignImageRotation', rotation);
-        },
-
-        setBackgroundImage ({ commit }, imageItem) {
-            const id = imageItem.id;
-            const src = imageItem.src;
-
-            commit('setBackgroundImageId', id);
-            commit('setBackgroundImageSrc', src);
         },
 
         flipDesignImageHorizontal ({ commit }) {
@@ -173,6 +284,14 @@ export default new Vuex.Store({
             }
 
             commit('setDesignImageSizeWarning', warning);
+        },
+
+        toggleProductSide ({ commit, dispatch }) {
+            commit('toggleProductSide');
+
+            // switch Front/Back Background and Design images
+            dispatch('setBackgroundImageCurrent');
+            dispatch('setDesignImageCurrent');
         },
 
     }

@@ -81,19 +81,21 @@
                 );
             },
 
-            imageReader (imageSrc) {
+            imageReader (file) {
                 // upload only images
-                let correctImageSrc = this.acceptImagesOnly(imageSrc);
+                let correctImageSrc = this.acceptImagesOnly(file);
 
                 if (!correctImageSrc) {
-                    console.warn('Uploaded file is not image type: ' + imageSrc);
+                    console.warn('Uploaded file is not image type: ' + file);
                     return;
                 }
 
                 let reader = new FileReader();
 
                 reader.onload = (event) => {
-                    this.imageLoaded(event.target.result);
+                    const imageSrc = event.target.result;
+
+                    this.imageLoaded(imageSrc);
                 };
 
                 reader.readAsDataURL(correctImageSrc);

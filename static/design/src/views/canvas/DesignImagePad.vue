@@ -12,6 +12,7 @@
     import { mapState, mapActions } from 'vuex';
     import LoadImage from '../../util/loadImage';
 
+    // this component is destined for lower the design image size for improve usability
     export default {
         name: "designImagePad",
 
@@ -93,6 +94,12 @@
                 );
             },
 
+        },
+
+        beforeMount () {
+            // set canvas size to the Pad size
+            this.config.width = this.maxSize.width;
+            this.config.height = this.maxSize.height;
         },
 
     }

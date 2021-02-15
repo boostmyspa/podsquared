@@ -1,0 +1,9 @@
+
+$navbar-height: 3.75rem;
+
+.content_glamour,
+.sidebar__glamour {
+  @media #{$min-md} {
+    height: calc(100vh - #{$navbar-height});
+  }
+}

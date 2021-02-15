@@ -12,6 +12,8 @@
                             <div class="canvas-container">
                                 <canvas-main></canvas-main>
                                 <canvas-design-image-pad></canvas-design-image-pad>
+
+                                <product-side-toggle></product-side-toggle>
                             </div>
                         </div>
                     </div>
@@ -26,6 +28,7 @@
 
 <script>
     import CanvasMain from '../canvas/CanvasMain';
+    import ProductSideToggle from '../canvas/ProductSideToggle';
     import DesignImagePad from '../canvas/DesignImagePad';
     import Sidebar from './Sidebar';
 
@@ -34,6 +37,7 @@
 
         components: {
             'canvas-main': CanvasMain,
+            'product-side-toggle': ProductSideToggle,
             'canvas-design-image-pad': DesignImagePad,
             'sidebar': Sidebar,
         },

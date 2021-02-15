@@ -84,24 +84,47 @@
   opacity: 1;
 }
 
+@media screen and (min-width: 992px) {
+  .content_glamour,
+  .sidebar__glamour {
+    height: calc(100vh - 3.75rem);
+  }
+}
+
 .canvas-container {
+  position: relative;
   width: 500px;
   height: 500px;
   margin: auto;
 }
 
-.side-bar {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  max-width: 200px;
-  padding: 20px;
-}
-
 .design-image-pag {
   position: fixed;
   left: -5000px;
+}
+
+.product-side-toggle {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  padding: 10px 24px;
+  border-radius: 50px;
+  background: #fff;
+  box-shadow: 1px 1px 3px #555;
+}
+.product-side-toggle--btn {
+  padding: 4px 8px;
+  border: 2px solid #eee;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.product-side-toggle .fas {
+  margin-right: 5px;
+  font-size: 16px;
+  vertical-align: text-bottom;
 }
 
 .upload-image-drag-zone {
