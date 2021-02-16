@@ -1,9 +1,9 @@
 <template>
     <div class="sidebar__glamour">
-        <h3 class="title__glamour mt-3 p-2">First, Let's Start by Uploading Your Design</h3>
+        <h3 class="title__glamour mt-3 p-md-2">First, Let's Start by Uploading Your Design</h3>
 
         <upload-image
-                :class="'mt-3 mb-2'"
+                :class="'d-none d-md-block mt-3 mb-2'"
                 :dragUploadEnable="true"
                 @uploadedImage="uploadedDesignImage"
         >
@@ -20,6 +20,12 @@
                     </upload-image>
                 </div>
             </div>
+        </upload-image>
+        <upload-image
+                :class="'d-md-none mt-3 mb-2'"
+                @uploadedImage="uploadedDesignImage"
+        >
+            <span class="btn btn-sm btn-primary">Browse files</span>
         </upload-image>
 
         <template v-if="designImageSizeWarning">
@@ -45,8 +51,6 @@
             <div class="product-card-list">
                 <product-card v-for="product in selectedProducts" :item="product" :key="'id-product-card-' + product.id"></product-card>
             </div>
-
-            <product-modal :showModal="showProductModal" @closeProductModal="closeProductModal"></product-modal>
 
             <div class="btn__holder">
                 <button @click.left="openProductModal" class="btn btn-outline-dark w-100">
@@ -102,7 +106,6 @@
     import { mapState, mapActions } from 'vuex';
     import UploadImage from '../uploader/UploadImage';
     import ProductCard from '../product/ProductCard';
-    import ProductModal from '../product/ProductModal';
 
     export default {
         name: "Sidebar",
@@ -110,12 +113,14 @@
         components: {
             'upload-image': UploadImage,
             'product-card': ProductCard,
-            'product-modal': ProductModal,
         },
+
+        props: [
+            'showProductModal'
+        ],
 
         data: () => {
             return {
-                showProductModal: false,
                 publicPath: process.env.BASE_URL,
             }
         },
@@ -128,11 +133,7 @@
             ]),
 
             openProductModal () {
-                this.showProductModal = true;
-            },
-
-            closeProductModal () {
-                this.showProductModal = false;
+                this.$emit('openProductModal');
             },
 
             uploadedDesignImage (image) {

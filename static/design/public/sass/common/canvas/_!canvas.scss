@@ -1,12 +1,14 @@
 
 .canvas-container {
   position: relative;
-  width: 500px;
-  height: 500px;
+  width: 100%;
+}
+
+.konvajs-content {
   margin: auto;
 }
 
-.design-image-pag {
+.design-image-pad {
   position: fixed;
   left: -5000px;
 }

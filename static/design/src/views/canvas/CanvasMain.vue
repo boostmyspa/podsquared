@@ -176,12 +176,20 @@
         data: () => {
             return {
                 publicPath: process.env.BASE_URL,
+                isTouchDevice: false,
+
+                stageInitSize: {
+                    width: 500,
+                    height: 500,
+                },
 
                 stageConfig: {
                     width: 500,
                     height: 500,
                     offsetX: -0.5,
                     offsetY: -0.5,
+                    scaleX: 1,
+                    scaleY: 1,
                 },
 
                 // settings
@@ -424,9 +432,13 @@
             designImageDragBoundFunc: function  (pos) {
                 // important pos - is absolute position of the node
                 // you should return absolute position too
+
+                // use scale on small devices
+                const scale = this.stageConfig.scaleX;
+
                 let
-                    x = pos.x,
-                    y = pos.y;
+                    x = pos.x / scale,
+                    y = pos.y / scale;
 
                 const
                     box = this.designCropConfig,
@@ -463,8 +475,31 @@
                     &&
                     imageCenterX < boxCenterX + this.dragBoundStep * 2;
 
+                x = x * scale;
+                y = y * scale;
+
                 return { x, y }
-            }
+            },
+
+            checkIsTouchDevice () {
+                return (('ontouchstart' in window) ||
+                    (navigator.maxTouchPoints > 0) ||
+                    (navigator.msMaxTouchPoints > 0));
+            },
+
+            updateCanvasSize () {
+                const container = document.getElementById('canvas-container');
+                const containerWidth = container.offsetWidth;
+                const stageWidth = this.stageConfig.width;
+                let scale = 1;
+
+                if (stageWidth >= containerWidth) {
+                    scale = containerWidth / stageWidth;
+                }
+
+                this.stageConfig.scaleX = scale;
+                this.stageConfig.scaleY = scale;
+            },
         },
 
         computed: {
@@ -528,8 +563,8 @@
             }
         },
 
-        updated: function () {
-            this.$nextTick(function () {
+        updated () {
+            this.$nextTick( () => {
                 this.updateTransformerRotater();
             })
         },
@@ -543,6 +578,19 @@
                 },
                 `${this.publicPath}img/icons/rotate.png`
             );
+
+            // init canvas size sets
+            window.addEventListener('resize', this.updateCanvasSize, false);
+
+            this.updateCanvasSize();
+
+            // check if it's a TouchDevice
+            this.isTouchDevice = this.checkIsTouchDevice();
+
+            // show "printable area" on touch devices
+            if (this.isTouchDevice) {
+                this.isHovered = true;
+            }
         }
     }
 </script>

@@ -2,25 +2,30 @@
 .product-item {
   overflow: hidden;
   flex: 0 1 auto;
-  display: flex;
   position: relative;
   width: 100%;
-  margin: 0 0 20px;
+  max-width: 400px;
+  margin: 0 auto 20px;
   border: 2px solid $color-gray;
   border-radius: 8px;
   cursor: pointer;
 
-  @media #{$min-md} {
-    width: calc(50% - 10px);
+  @media #{$min-lg} {
+    display: flex;
+    max-width: 100%;
   }
 
   &--figure {
     flex: 1 0 auto;
     display: flex;
     align-items: center;
-    width: 220px;
+    width: 100%;
     padding: 10px;
     background: $color-gray-light;
+
+    @media #{$min-lg} {
+      width: 220px;
+    }
   }
 
   &--img {
@@ -41,7 +46,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: 20px;
+    top: 20px;
     right: 20px;
     width: 30px;
     height: 30px;
@@ -50,6 +55,11 @@
     font-size: 14px;
     color: $color-gray-light;
     background: $color-white;
+
+    @media #{$min-lg} {
+      top: auto;
+      bottom: 20px;
+    }
 
     &.selected {
       border-color: $color-primary;

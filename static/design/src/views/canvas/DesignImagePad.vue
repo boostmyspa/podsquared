@@ -1,5 +1,5 @@
 <template>
-    <div class="design-image-pag">
+    <div class="design-image-pad">
         <v-stage ref="stage" :config="config">
             <v-layer>
                 <v-image :config="config"></v-image>

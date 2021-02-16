@@ -16,12 +16,10 @@
   .custom-file-boxed {
     border: 0.1rem dashed #464646;
   }
+}
 
+.upload-image {
   [type="file"] {
     display: none;
   }
-}
-
-[type="file"] {
-  max-width: 100%;
 }

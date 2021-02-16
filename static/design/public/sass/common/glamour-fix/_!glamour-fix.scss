@@ -1,9 +1,13 @@
 
 $navbar-height: 3.75rem;
 
+.navbar-fixed {
+  height: $navbar-height;
+}
+
 .content_glamour,
 .sidebar__glamour {
-  @media #{$min-md} {
+  @media #{$min-sm} {
     height: calc(100vh - #{$navbar-height});
   }
 }
