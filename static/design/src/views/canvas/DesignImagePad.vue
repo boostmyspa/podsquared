@@ -88,7 +88,8 @@
             imageSrc () {
                 LoadImage(
                     (image) => {
-                        this.setImageSize(image);
+                        // this.setImageSize(image);
+                        this.setDesignImage(image);
                     },
                     this.imageSrc
                 );
