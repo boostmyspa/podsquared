@@ -71,8 +71,7 @@
                     <div class="card__help">
                         <div class="card__help__header" id="headingOne">
                             <a href="#" class="collapsed"  data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                <span><img :src="`${publicPath}img/tshirt__icon.svg`" alt=""> Sizing Chart</span>
-                                <img :src="`${publicPath}img/next.svg`" alt="" class="next__a ml-auto">
+                                <span>Sizing Chart</span>
                             </a>
                         </div>
 
@@ -85,9 +84,7 @@
                     <div class="card__help">
                         <div class="card__help__header" id="headingTwo">
                             <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                <span><img :src="`${publicPath}img/tshirt__icon.svg`" alt="">Product Information</span>
-
-                                <img :src="`${publicPath}img/next.svg`" alt="" class="next__a ml-auto">
+                                <span>Product Information</span>
                             </a>
                         </div>
                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
