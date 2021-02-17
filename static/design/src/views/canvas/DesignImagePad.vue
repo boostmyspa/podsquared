@@ -21,6 +21,7 @@
                config: {
                    width: 500,
                    height: 500,
+                   image: null,
                },
            }
         },
@@ -56,9 +57,8 @@
                 this.config.height = height;
                 this.config.image = image;
 
-                let t = setTimeout(() => {
+                this.$nextTick( () => {
                     this.saveImage();
-                    clearTimeout(t);
                 });
             },
 
@@ -88,8 +88,7 @@
             imageSrc () {
                 LoadImage(
                     (image) => {
-                        // this.setImageSize(image);
-                        this.setDesignImage(image);
+                        this.setImageSize(image);
                     },
                     this.imageSrc
                 );
