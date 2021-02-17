@@ -15,6 +15,7 @@
 
         methods: {
             ...mapActions('products', [
+                'setProducts',
                 'setFirstProduct',
             ]),
         },
@@ -24,6 +25,10 @@
         },
 
         beforeMount () {
+            // set products from Django
+            const products = JSON.parse(window.PRODUCTS);
+            this.setProducts(products);
+
             this.setFirstProduct();
         }
     }

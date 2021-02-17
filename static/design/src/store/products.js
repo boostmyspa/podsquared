@@ -1,92 +1,11 @@
 import Vue from 'vue';
 
-const publicPath = process.env.BASE_URL;
-
 export default {
     namespaced: true,
 
     state: {
-        products: [
-            {
-                id: 1,
-                title: 'T-Shirt Gildan HeatherBerry',
-                src: publicPath + 'img/t-shirt/Gildan64000_WhiteBackground_HeatherBerry.jpg',
-                description: 'T-Shirt Description text goes here',
-                colors: [
-                    {
-                        title: 'brown',
-                        color: '#CBA876',
-                        srcFront: publicPath + 'img/t-shirt/Gildan64000_WhiteBackground_HeatherBerry.jpg',
-                        srcBack: publicPath + 'img/t-shirt/Gildan64000_WhiteBackground_HeatherBerry_Back.jpg',
-                        selected: false,
-                    },
-                    {
-                        title: 'd-brown',
-                        color: '#956743',
-                        srcFront: publicPath + 'img/mockups/img1.png',
-                        srcBack: publicPath + 'img/mockups/img1_Back.png',
-                        selected: false,
-                    },
-                    {
-                        title: 'orange',
-                        color: '#FABB98',
-                        srcFront: publicPath + 'img/mockups/img5.png',
-                        srcBack: publicPath + 'img/mockups/img5.png',
-                        selected: false,
-                    },
-                ],
-                selected: false,
-            },
-            {
-                id: 2,
-                title: 'T-Shirt Gildan HeatherBronze',
-                src: publicPath + 'img/t-shirt/Gildan64000_WhiteBackground_HeatherBronze.jpg',
-                description: 'T-Shirt Description text goes here',
-                colors: [
-                    {
-                        title: 'gray',
-                        color: '#BCBBC1',
-                        srcFront: publicPath + 'img/t-shirt/Gildan64000_WhiteBackground_HeatherBronze.jpg',
-                        srcBack: publicPath + 'img/t-shirt/Gildan64000_WhiteBackground_HeatherBronze_Back.jpg',
-                        selected: false,
-                    },
-                    {
-                        title: 'l-brown',
-                        color: '#E9D8C4',
-                        srcFront: publicPath + 'img/mockups/img6.png',
-                        srcBack: publicPath + 'img/mockups/img6.png',
-                        selected: false,
-                    },
-                    {
-                        title: 'brown',
-                        color: '#CBA876',
-                        srcFront: publicPath + 'img/mockups/img10.png',
-                        srcBack: publicPath + 'img/mockups/img10.png',
-                        selected: false,
-                    },
-                ],
-                selected: false,
-            },
-            {
-                id: 3,
-                title: 'T-Shirt Gildan HeatherBronze',
-                src: publicPath + 'img/mockups/img5.png',
-                description: 'T-Shirt Description text goes here',
-                colors: [
-                    {
-                        title: 'orange',
-                        color: '#FABB98',
-                        srcFront: publicPath + 'img/mockups/img5.png',
-                        srcBack: publicPath + 'img/mockups/img5.png',
-                        selected: false,
-                    },
-                ],
-                selected: false,
-            },
-        ],
-
+        products: [], // all products from database
         selectedProducts: [],
-
     },
 
     getters: {
@@ -96,6 +15,10 @@ export default {
     },
 
     mutations: {
+        setProducts (state, products) {
+            state.products = products;
+        },
+
         add (state, product) {
             state.selectedProducts.push(product);
         },
@@ -114,6 +37,10 @@ export default {
     },
 
     actions: {
+        setProducts ({ commit }, products) {
+            commit('setProducts', products);
+        },
+
         addProduct ({ commit }, product) {
             commit('add', product);
             commit('setProductSelect', { product, selected: true });

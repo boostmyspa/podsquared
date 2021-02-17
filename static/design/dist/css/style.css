@@ -126,6 +126,7 @@
   font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 .product-side-toggle .fas {
   margin-right: 5px;
