@@ -8,7 +8,6 @@
 
 <script>
     import { mapState, /*mapActions*/ } from 'vuex';
-    import LoadImage from '../../util/loadImage';
     import ContainImageInBox from '../../util/ContainImageInBox';
 
     export default {
@@ -18,41 +17,26 @@
             'boxContainer'
         ],
 
-        data: () => {
-            return {
-                backgroundImage: null,
-            }
-        },
-
         methods: {
-            LoadBackgroundImage () {
-                LoadImage(
-                    (image) => {
-                        this.backgroundImage = image;
-                    },
-                    this.backgroundImageSrc
-                );
-            },
+
         },
 
         computed: {
-            ...mapState('backgroundImage', {
-                backgroundImageData: 'backgroundImage',
-            }),
-
-            backgroundImageSrc () {
-                return this.backgroundImageData.src;
-            },
+            ...mapState('backgroundImage', [
+                'backgroundImage',
+            ]),
 
             backgroundImageConfig () {
-                if (!this.backgroundImage)
+                const image = this.backgroundImage.image;
+
+                if (!image)
                     return {
+                        image: null,
                         width: 0,
                         height: 0,
                     };
 
                 const
-                    image = this.backgroundImage,
                     box = this.boxContainer,
                     boxWidth = box.width,
                     boxHeight = box.height;
@@ -64,7 +48,7 @@
                     height = imageSize.height;
 
                 return {
-                    image: this.backgroundImage,
+                    image: image,
                     x: -width / 2,
                     y: -height / 2,
                     width: width,
@@ -73,18 +57,6 @@
                     offsetY: -boxHeight / 2,
                 };
             },
-        },
-
-        watch: {
-            backgroundImageSrc () {
-                this.LoadBackgroundImage();
-            },
-        },
-
-        beforeMount () {
-            if (this.backgroundImageSrc) {
-                this.LoadBackgroundImage();
-            }
         },
     }
 </script>
