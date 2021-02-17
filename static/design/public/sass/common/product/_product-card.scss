@@ -9,5 +9,15 @@
   &--img {
     width: 110px;
     border-radius: 4px;
+
+    @media #{$max-sm} {
+      margin: 0 0 15px;
+    }
+  }
+
+  .media {
+    @media #{$max-sm} {
+      display: block;
+    }
   }
 }

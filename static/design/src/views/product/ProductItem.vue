@@ -5,9 +5,9 @@
         </figure>
         <div class="product-item--info">
             <h4 class="product-item--title">{{ item.title }}</h4>
-            <div class="product-item--description">
-                {{ item.description }}
-            </div>
+            <div class="product-item--description"
+                 v-html="item.description"
+            ></div>
         </div>
         <div class="product-item--icon-select" :class="item.selected ? 'selected' : ''">
             <i class="fas" :class="item.selected ? 'fa-check' : 'fa-plus'"></i>

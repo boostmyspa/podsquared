@@ -11,3 +11,15 @@ $navbar-height: 3.75rem;
     height: calc(100vh - #{$navbar-height});
   }
 }
+
+.glamour__body__content {
+  .card__product {
+    .media {
+      .media-body {
+        @media #{$max-sm} {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

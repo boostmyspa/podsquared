@@ -4,15 +4,17 @@
   flex: 0 1 auto;
   position: relative;
   width: 100%;
-  max-width: 400px;
-  margin: 0 auto 20px;
+  margin: 0 auto 30px;
   border: 2px solid $color-gray;
   border-radius: 8px;
   cursor: pointer;
 
+  @media #{$max-sm} {
+    max-width: 400px;
+  }
+
   @media #{$min-lg} {
     display: flex;
-    max-width: 100%;
   }
 
   &--figure {
@@ -39,6 +41,14 @@
 
   &--title {
     margin: 0 0 20px;
+  }
+
+  &--description {
+    p {
+      &:last-of-type {
+        margin: 0;
+      }
+    }
   }
 
   &--icon-select {
