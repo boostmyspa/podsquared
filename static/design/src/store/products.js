@@ -145,7 +145,7 @@ export default {
             // take image from selected color or from the first of the product colors
             const imageItem = selected ? colorItem : product.colors[0];
 
-            dispatch('setBackgroundImage', { imageItem, productId }, { root: true });
+            dispatch('backgroundImage/setBackgroundImage', { imageItem, productId }, { root: true });
         },
 
         toggleProductColor ({ dispatch }, { colorItem, product }) {

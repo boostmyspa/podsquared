@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 
 import products from './products';
+import backgroundImage from './backgroundImage';
 
 Vue.use(Vuex);
 
@@ -9,6 +10,7 @@ export default new Vuex.Store({
 
     modules: {
         products,
+        backgroundImage,
     },
 
     state: {
@@ -59,14 +61,6 @@ export default new Vuex.Store({
         showProductFront: true, // Front/Back switch
         designImageSizeWarning: '', // good: ''; bed: 'medium'; veryBad: 'small'
 
-        backgroundImage: {
-            id: 1,
-            src: null,
-        },
-
-        backgroundImageFrontSrc: null,
-        backgroundImageBackSrc: null,
-
         printArea: {
             width: 14 * 300, // 14" * 300dpi
             height: 16 * 300, // 16" * 300dpi
@@ -114,14 +108,6 @@ export default new Vuex.Store({
             state.designImage.rotation = rotation;
         },
 
-        setBackgroundImageId (state, id) {
-            state.backgroundImage.id = id;
-        },
-
-        setBackgroundImageSrc (state, src) {
-            state.backgroundImage.src = src;
-        },
-
         flipDesignImageHorizontal (state) {
             state.designImage.scaleX *= -1;
         },
@@ -158,50 +144,9 @@ export default new Vuex.Store({
         setDesignImageBackAsCurrent (state) {
             state.designImageBack = Object.assign({}, state.designImage);
         },
-
-        setBackgroundImageFrontSrc (state, src) {
-            state.backgroundImageFrontSrc = src;
-        },
-
-        setBackgroundImageBackSrc (state, src) {
-            state.backgroundImageBackSrc = src;
-        },
-
-        setBackgroundImageFrontAsCurrent (state) {
-            state.backgroundImage.src = state.backgroundImageFrontSrc;
-        },
-
-        setBackgroundImageBackAsCurrent (state) {
-            state.backgroundImage.src = state.backgroundImageBackSrc;
-        },
     },
 
     actions: {
-        // on select/unSelect product color - set the background image Front/Back sources
-        setBackgroundImage ({ commit, dispatch }, { imageItem, productId }) {
-            commit('setBackgroundImageId', productId);
-
-            const srcFront = imageItem.srcFront;
-            const srcBack = imageItem.srcBack;
-
-            commit('setBackgroundImageFrontSrc', srcFront);
-            commit('setBackgroundImageBackSrc', srcBack);
-
-            dispatch('setBackgroundImageCurrent');
-        },
-
-        // on toggle Front/Back - set the Background (product) image
-        setBackgroundImageCurrent ({ state, commit }) {
-            const isFront = state.showProductFront;
-
-            if (isFront) {
-                commit('setBackgroundImageFrontAsCurrent');
-            }
-            else {
-                commit('setBackgroundImageBackAsCurrent');
-            }
-        },
-
         // on toggle Front/Back - set the Design image
         setDesignImageCurrent ({ state, commit }) {
             const isFront = state.showProductFront;
@@ -290,7 +235,7 @@ export default new Vuex.Store({
             commit('toggleProductSide');
 
             // switch Front/Back Background and Design images
-            dispatch('setBackgroundImageCurrent');
+            dispatch('backgroundImage/setBackgroundImageCurrent');
             dispatch('setDesignImageCurrent');
         },
 

@@ -36,7 +36,7 @@
         },
 
         computed: {
-            ...mapState({
+            ...mapState('backgroundImage', {
                 backgroundImageData: 'backgroundImage',
             }),
 
